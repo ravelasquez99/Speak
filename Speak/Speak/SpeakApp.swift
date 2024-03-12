@@ -11,7 +11,7 @@ import SwiftUI
 struct SpeakApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FirstView()
         }
     }
 }

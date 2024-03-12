@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
-		9553C81F2BA0F1D300D4D10E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81E2BA0F1D300D4D10E /* ContentView.swift */; };
+		9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81E2BA0F1D300D4D10E /* FirstView.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
 		9553C8252BA0F1D400D4D10E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */; };
+		9553C82F2BA0F91900D4D10E /* CoursesVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */; };
+		9553C8312BA0FA5D00D4D10E /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9553C8192BA0F1D300D4D10E /* Speak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakApp.swift; sourceTree = "<group>"; };
-		9553C81E2BA0F1D300D4D10E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9553C81E2BA0F1D300D4D10E /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		9553C8202BA0F1D400D4D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9553C8222BA0F1D400D4D10E /* Speak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speak.entitlements; sourceTree = "<group>"; };
 		9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVCRepresentable.swift; sourceTree = "<group>"; };
+		9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +56,11 @@
 		9553C81B2BA0F1D300D4D10E /* Speak */ = {
 			isa = PBXGroup;
 			children = (
-				9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */,
-				9553C81E2BA0F1D300D4D10E /* ContentView.swift */,
 				9553C8202BA0F1D400D4D10E /* Assets.xcassets */,
+				9553C81E2BA0F1D300D4D10E /* FirstView.swift */,
+				9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */,
 				9553C8222BA0F1D400D4D10E /* Speak.entitlements */,
+				9553C82B2BA0F2DE00D4D10E /* Libraries */,
 				9553C8232BA0F1D400D4D10E /* Preview Content */,
 			);
 			path = Speak;
@@ -67,6 +72,23 @@
 				9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9553C82B2BA0F2DE00D4D10E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9553C82C2BA0F31400D4D10E /* CourseScreenKit */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		9553C82C2BA0F31400D4D10E /* CourseScreenKit */ = {
+			isa = PBXGroup;
+			children = (
+				9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */,
+				9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */,
+			);
+			path = CourseScreenKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9553C81F2BA0F1D300D4D10E /* ContentView.swift in Sources */,
+				9553C82F2BA0F91900D4D10E /* CoursesVCRepresentable.swift in Sources */,
+				9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */,
 				9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */,
+				9553C8312BA0FA5D00D4D10E /* CoursesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
