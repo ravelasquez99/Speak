@@ -1,0 +1,241 @@
+{
+    "id": "te_1",
+    "info":
+    {
+        "title": "바로 써먹는 여행영어 (필수)",
+        "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/thumbnailImageUrl/te_1_thumbnailImage.jpg",
+        "subtitle": "with Aurdey & Lana"
+    },
+    "units":
+    [
+        {
+            "id": "unit_0",
+            "days":
+            [
+                {
+                    "id": "day_0",
+                    "title": "로컬 맛집 추천해주실래요?",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D0_imageUrl.jpg",
+                    "subtitle": "Could you recommend a good restaurant with local vibes?"
+                },
+                {
+                    "id": "day_1",
+                    "title": "창가 테이블로 가능할까요?",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D1_imageUrl.jpg",
+                    "subtitle": "Is it possible to get a table by the window?"
+                },
+                {
+                    "id": "day_2",
+                    "title": "메뉴 좀 주실래요?",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D2_imageUrl.jpg",
+                    "subtitle": "Can we grab the menu, please?"
+                },
+                {
+                    "id": "day_3",
+                    "title": "쌀국수, 고수 빼고 주세요.",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D3_imageUrl.jpg",
+                    "subtitle": "I’ll get the pho without the cilantro."
+                },
+                {
+                    "id": "day_4",
+                    "title": "앞접시 좀 갖다 주실래요?",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D4_imageUrl.jpg",
+                    "subtitle": "Could you bring some extra plates, please?"
+                },
+                {
+                    "id": "day_5",
+                    "title": "로컬 맛집 200% 즐기기",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D5_imageUrl.jpg",
+                    "subtitle": "Review Day"
+                }
+            ]
+        },
+        {
+            "id": "unit_1",
+            "days":
+            [
+                {
+                    "id": "day_6",
+                    "title": "입국 심사 통과하기 1탄",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D6_imageUrl.jpg",
+                    "subtitle": "Customs & Immigration at the Airport 1"
+                },
+                {
+                    "id": "day_7",
+                    "title": "입국 심사 통과하기 2탄",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D7_imageUrl.jpg",
+                    "subtitle": "Customs & Immigration at the Airport 2"
+                },
+                {
+                    "id": "day_8",
+                    "title": "환승편을 놓칠까 조마조마해요.",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D8_imageUrl.jpg",
+                    "subtitle": "I’m afraid I might miss my connecting flight."
+                },
+                {
+                    "id": "day_9",
+                    "title": "제 짐이 안 나왔어요.",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D9_imageUrl.jpg",
+                    "subtitle": "My suitcase hasn’t arrived."
+                },
+                {
+                    "id": "day_10",
+                    "title": "복도 자리로 부탁해요.",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D10_imageUrl.jpg",
+                    "subtitle": "I’d like an aisle seat, please."
+                },
+                {
+                    "id": "day_11",
+                    "title": "여행의 시작, 공항!",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D11_imageUrl.jpg",
+                    "subtitle": "Review Day"
+                }
+            ]
+        },
+        {
+            "id": "unit_2",
+            "days":
+            [
+                {
+                    "id": "day_12",
+                    "title": "에어비엔비, 게스트하우스",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D12_imageUrl.jpg",
+                    "subtitle": "에어비엔비, 게스트하우스",
+                    "lessons":
+                    [
+                        {
+                            "id": "TE1_D12_VL",
+                            "title": "TE1_D12_VL",
+                            "durationMin": 9
+                        },
+                        {
+                            "id": "TE1_D12_SP",
+                            "title": "TE1_D12_SP",
+                            "durationMin": 7
+                        },
+                        {
+                            "id": "TE1_D12_CS_FULL",
+                            "title": "TE1_D12_CS_FULL",
+                            "durationMin": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "day_13",
+                    "title": "조식 시간이 어떻게 돼요? ",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D13_imageUrl.jpg",
+                    "subtitle": "What are your breakfast hours?",
+                    "lessons":
+                    [
+                        {
+                            "id": "TE1_D13_VL",
+                            "title": "TE1_D13_VL",
+                            "durationMin": 9
+                        },
+                        {
+                            "id": "TE1_D13_SP",
+                            "title": "TE1_D13_SP",
+                            "durationMin": 6
+                        },
+                        {
+                            "id": "TE1_D13_CS_FULL",
+                            "title": "체크인 할게요!",
+                            "durationMin": 4
+                        }
+                    ]
+                },
+                {
+                    "id": "day_14",
+                    "title": "룸서비스 주문하고 싶어요.",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D14_imageUrl.jpg",
+                    "subtitle": "I’d like to order room service.",
+                    "lessons":
+                    [
+                        {
+                            "id": "TE1_D14_VL",
+                            "title": "TE1_D14_VL",
+                            "durationMin": 9
+                        },
+                        {
+                            "id": "TE1_D14_SP",
+                            "title": "TE1_D14_SP",
+                            "durationMin": 6
+                        },
+                        {
+                            "id": "TE1_D14_CS_FULL",
+                            "title": "TE1_D14_CS_FULL",
+                            "durationMin": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "day_15",
+                    "title": "에어컨이 안 되는 것 같아요.",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D15_imageUrl.jpg",
+                    "subtitle": "It seems like the AC isn’t working.",
+                    "lessons":
+                    [
+                        {
+                            "id": "TE1_D15_VL",
+                            "title": "TE1_D15_VL",
+                            "durationMin": 9
+                        },
+                        {
+                            "id": "TE1_D15_SP",
+                            "title": "TE1_D15_SP",
+                            "durationMin": 6
+                        },
+                        {
+                            "id": "TE1_D15_CS_FULL",
+                            "title": "TE1_D15_CS_FULL",
+                            "durationMin": 5
+                        }
+                    ]
+                },
+                {
+                    "id": "day_16",
+                    "title": "여기 짐 좀 맡겨 놔도 돼요?",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D16_imageUrl.jpg",
+                    "subtitle": "Can we leave our bags here?",
+                    "lessons":
+                    [
+                        {
+                            "id": "TE1_D16_VL",
+                            "title": "TE1_D16_VL",
+                            "durationMin": 6
+                        },
+                        {
+                            "id": "TE1_D16_SP",
+                            "title": "TE1_D16_SP",
+                            "durationMin": 6
+                        },
+                        {
+                            "id": "TE1_D16_CS_FULL",
+                            "title": "TE1_D16_CS_FULL",
+                            "durationMin": 4
+                        }
+                    ]
+                },
+                {
+                    "id": "day_17",
+                    "title": "잠자리가 편해야 행복한 여행",
+                    "thumbnailImageUrl": "https://d34af8cfq8hdgo.cloudfront.net/images/courses/TE1/TE1_D17_imageUrl.jpg",
+                    "subtitle": "Review Day",
+                    "lessons":
+                    [
+                        {
+                            "id": "TE1_D17_SP",
+                            "title": "TE1_D17_SP",
+                            "durationMin": 8
+                        },
+                        {
+                            "id": "TE1_D17_CS_FULL",
+                            "title": "TE1_D17_CS_FULL",
+                            "durationMin": 6
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
