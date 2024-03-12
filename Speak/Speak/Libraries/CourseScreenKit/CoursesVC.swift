@@ -9,13 +9,15 @@ import UIKit
 
 final class CoursesVC: UIViewController {
     
+
     // MARK: - VC Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutViews()
     }
-    
+
+
     // MARK: - View Layout
 
     private func layoutViews() {
