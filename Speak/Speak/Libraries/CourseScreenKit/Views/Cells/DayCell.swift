@@ -33,7 +33,7 @@ public final class DayCell: UITableViewCell {
             subtitleLabel.text = subtitle
         }
     }
-    
+
     private let imageAndIconView = UIView()
     private let dayImageView = UIImageView()
     var thumbnailImageURL: String? = nil {
@@ -116,4 +116,3 @@ public final class DayCell: UITableViewCell {
         )
     }
 }
-
