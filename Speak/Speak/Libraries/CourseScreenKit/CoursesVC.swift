@@ -24,7 +24,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         self.course = course
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -62,12 +62,12 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         unitsTableView.delegate = self
 
         unitsTableView.register(
-            UITableViewCell.self,
+            DayCell.self,
             forCellReuseIdentifier: Self.dayCellReuseIdentifier
         )
 
         unitsTableView.register(
-            UITableViewCell.self,
+            UnitCell.self,
             forCellReuseIdentifier: Self.unitCelllReuseIdentifier
         )
 
@@ -97,7 +97,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
 
     private func dayCellHeight() -> CGFloat {
-        return 90
+        return 140
     }
 
 
@@ -132,31 +132,46 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         tableView: UITableView,
         indexPath: IndexPath
     ) -> UITableViewCell {
-        guard let view = tableView.dequeueReusableCell(
+        guard let unitCell = tableView.dequeueReusableCell(
             withIdentifier: Self.unitCelllReuseIdentifier
-        ) else {
+        ) as? UnitCell else {
             fatalError("Could not dequeue header view")
         }
 
-        let index = indexPath.section
-        let colors: [UIColor] = [.blue, .red, .orange, .gray, .purple, .black]
-        view.contentView.backgroundColor = colors[index] //TODO
-        return view
+        unitCell.unitNumber = indexPath.section + 1
+        // using id because there is no unit name in the json
+        unitCell.unitName = course.units[indexPath.section].id
+        return unitCell
     }
 
     private func dayCell(
         tableView: UITableView,
         indexPath: IndexPath
     ) -> UITableViewCell {
-        //TODO remember index + 1 to account for unit cell
-        let cell = tableView.dequeueReusableCell(
+        guard let cell = tableView.dequeueReusableCell(
             withIdentifier: Self.dayCellReuseIdentifier,
             for: indexPath
-        )
+        ) as? DayCell
+        else {
+            fatalError("Could not dequeue day cell")
+        }
 
-        cell.contentView.backgroundColor = .green
-        cell.contentView.layer.borderColor = UIColor.orange.cgColor //TODO
-        cell.contentView.layer.borderWidth = 1
+        // Normally I would check the array size.
+        let dayNumber = indexPath.row - 1 // to account for unit cell
+        let day = course
+            .units[indexPath.section]
+            .days[dayNumber]
+        
+        /* 
+         If I had more time you need an algo here because the first day in unit 2
+         is not day 0. It Is day (number of days in unit 1 + 1)
+         You'd also need to account for units with no days, etc
+        */
+        cell.dayNumber = dayNumber
+        cell.title = day.title
+        cell.subtitle = day.subtitle
+        cell.thumbnailImageURL = day.thumbnailImageURL
+        cell.isComplete = dayNumber == 0 // This data is missing from the model
 
         return cell
     }
@@ -165,7 +180,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath
     ) -> CGFloat {
-        return dayCellHeight()
+        return indexPath.row == 0 ? unitHeaderHeight() : dayCellHeight()
     }
 
 
