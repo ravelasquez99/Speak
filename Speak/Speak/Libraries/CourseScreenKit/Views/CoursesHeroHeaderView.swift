@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 public final class CoursesHeroHeaderView: UIView {
     private let bannerImageView: UIImageView
+    private let circleImageView: UIImageView
     
     public init(
         frame: CGRect,
@@ -19,13 +21,17 @@ public final class CoursesHeroHeaderView: UIView {
         
     ) {
         self.bannerImageView = UIImageView(image: UIImage(named: bannerImageName))
+        self.circleImageView = UIImageView(frame: .zero)
         super.init(frame: frame)
         self.addSubview(bannerImageView)
+        self.addSubview(circleImageView)
 
         //bannerImageView Setup
         bannerImageView.contentMode = .scaleAspectFill
-        bannerImageView.layer.borderWidth = 1.0
-        bannerImageView.layer.borderColor = UIColor.black.cgColor
+
+        //circleImageView Setup
+        circleImageView.sd_setImage(with: URL(string: circleImageURLString))
+        circleImageView.contentMode = .scaleAspectFill
     }
 
     required init?(coder: NSCoder) {
@@ -40,5 +46,17 @@ public final class CoursesHeroHeaderView: UIView {
             bounds.width,
             floor(bounds.height * 0.6) //magic number with no layout file
         )
+
+        let heightBetweenSafeAreaAndBottomOfImage = bannerImageView.bounds.height - safeAreaInsets.top
+        let imageWidthAndHeight = floor(heightBetweenSafeAreaAndBottomOfImage * 0.75) //magic number with no layout file
+        
+        circleImageView.frame = CGRectMake(
+            (bounds.width / 2) - (imageWidthAndHeight / 2),
+            bannerImageView.bounds.height - imageWidthAndHeight,
+            imageWidthAndHeight,
+            imageWidthAndHeight
+        )
+        circleImageView.layer.cornerRadius = imageWidthAndHeight / 2
+        circleImageView.clipsToBounds = true
     }
 }
