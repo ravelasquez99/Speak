@@ -12,7 +12,14 @@ struct CoursesVCRepresentable: UIViewControllerRepresentable {
     func makeUIViewController(
         context: Context
     ) -> CoursesVC {
-        return CoursesVC()
+        guard let course = LocalJsonRetriever.dataFromLocalJson(
+            named: "course",
+            modelType: Course.self
+        ) else {
+            fatalError("No course json")
+        }
+
+        return CoursesVC(course: course)
     }
     
     func updateUIViewController(

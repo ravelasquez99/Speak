@@ -12,10 +12,23 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     // MARK: - Variables
 
+    let course: Course
     let unitsTableView = UITableView(frame: .zero, style: .plain)
     private static let unitCelllReuseIdentifier = "unitSectionHeaderReuseIdentifier"
     private static let dayCellReuseIdentifier = "dayCellReuseIdentifier"
 
+
+    // MARK: - Init
+
+    init(course: Course) {
+        self.course = course
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 
     // MARK: - VC Lifecycle
 
@@ -182,10 +195,9 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
                 heroHeaderHeight()
             ),
             bannerImageName: "course-default-header-background",
-            //TODO get from model
-            circleImageURLString: "https://d34af8cfq8hdgo.cloudfront.net/images/courses/thumbnailImageUrl/te_1_thumbnailImage.jpg",
-            heroText: "바로 써먹는 여행영어 (필수)",
-            calloutText: "with Aurdey & Lana"
+            circleImageURLString: course.info.thumbnailImageURL,
+            heroText: course.info.title,
+            calloutText: course.info.subtitle
         )
     }
 }
