@@ -72,7 +72,7 @@ public final class CoursesHeroHeaderView: UIView {
         //Circle image
         let middleX = (bounds.width / 2)
         let heightBetweenSafeAreaAndBottomOfImage = bannerImageView.bounds.height - safeAreaInsets.top
-        let imageWidthAndHeight = floor(heightBetweenSafeAreaAndBottomOfImage * 0.75) //magic number with no layout file
+        let imageWidthAndHeight = heightBetweenSafeAreaAndBottomOfImage //magic number with no layout file
         
         circleImageView.frame = CGRectMake(
             middleX - (imageWidthAndHeight / 2),
@@ -92,7 +92,7 @@ public final class CoursesHeroHeaderView: UIView {
 
         calloutLabel.frame = CGRectMake(
             middleX - (calloutSize.width / 2),
-            circleImageView.frame.maxY + 12, //magic number with no layout file
+            circleImageView.frame.maxY + 20, //magic number with no layout file
             calloutSize.width,
             calloutSize.height
         )
@@ -105,7 +105,7 @@ public final class CoursesHeroHeaderView: UIView {
 
         heroLabel.frame = CGRectMake(
             middleX - (heroLabelSize.width / 2),
-            calloutLabel.frame.maxY + 2, //magic number with no layout file
+            calloutLabel.frame.maxY + 4, //magic number with no layout file
             heroLabelSize.width,
             heroLabelSize.height
         )
