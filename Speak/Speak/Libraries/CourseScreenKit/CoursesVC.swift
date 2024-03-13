@@ -116,9 +116,9 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return numberOfDaysInUnit(section)
+        return numberOfDaysInUnit(section) + 1 // the unit header is a cell
     }
-    
+
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
@@ -148,6 +148,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         tableView: UITableView,
         indexPath: IndexPath
     ) -> UITableViewCell {
+        //TODO remember index + 1 to account for unit cell
         let cell = tableView.dequeueReusableCell(
             withIdentifier: Self.dayCellReuseIdentifier,
             for: indexPath
@@ -175,16 +176,21 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     // MARK: - Model Logic
 
-    private func numberOfDaysInUnit(_ unit: Int) -> Int {
-        return 5 //hardcode to 5 for now
+    private func numberOfDaysInUnit(_ unitIndex: Int) -> Int {
+        guard unitIndex < course.units.count else {
+            return 0
+        }
+
+        let unit = course.units[unitIndex]
+        return unit.days.count
     }
 
     private func numberOfUnits() -> Int {
-        return 5 //hardcode to 5 for now
+        return course.units.count
     }
 
 
-    // MARK: - Tableview section headers
+    // MARK: - Header View Building
 
     private func heroHeaderView() -> UIView {
         return CoursesHeroHeaderView(
