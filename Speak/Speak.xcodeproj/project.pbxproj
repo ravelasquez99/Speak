@@ -16,6 +16,7 @@
 		956C33112BA2137D00AFBC90 /* CoursesHeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C33102BA2137D00AFBC90 /* CoursesHeroHeaderView.swift */; };
 		95F339CC2BA2204A00A56E29 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 95F339CB2BA2204A00A56E29 /* SDWebImage */; };
 		95F339CE2BA2204A00A56E29 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95F339CD2BA2204A00A56E29 /* SDWebImageMapKit */; };
+		95F339D12BA23EC900A56E29 /* SpeakColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F339D02BA23EC900A56E29 /* SpeakColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVCRepresentable.swift; sourceTree = "<group>"; };
 		9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 		956C33102BA2137D00AFBC90 /* CoursesHeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesHeroHeaderView.swift; sourceTree = "<group>"; };
+		95F339D02BA23EC900A56E29 /* SpeakColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		9553C82B2BA0F2DE00D4D10E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				95F339CF2BA23EB800A56E29 /* SpeakUIKit */,
 				9553C82C2BA0F31400D4D10E /* CourseScreenKit */,
 			);
 			path = Libraries;
@@ -104,6 +107,14 @@
 				956C33102BA2137D00AFBC90 /* CoursesHeroHeaderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		95F339CF2BA23EB800A56E29 /* SpeakUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				95F339D02BA23EC900A56E29 /* SpeakColor.swift */,
+			);
+			path = SpeakUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 				9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */,
 				9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */,
 				956C33112BA2137D00AFBC90 /* CoursesHeroHeaderView.swift in Sources */,
+				95F339D12BA23EC900A56E29 /* SpeakColor.swift in Sources */,
 				9553C8312BA0FA5D00D4D10E /* CoursesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

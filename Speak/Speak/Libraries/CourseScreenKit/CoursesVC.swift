@@ -23,6 +23,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         super.viewDidLoad()
         setupHeader()
         setupUnitsTableView()
+        view.backgroundColor = SpeakColor.standardViewBackground
         unitsTableView.backgroundColor = .purple
     }
 
