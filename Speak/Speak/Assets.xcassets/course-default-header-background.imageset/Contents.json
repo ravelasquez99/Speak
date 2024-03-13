@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "course-default-header-background.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

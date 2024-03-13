@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "course-unit-default-icon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
