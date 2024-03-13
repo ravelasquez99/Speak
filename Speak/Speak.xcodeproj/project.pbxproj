@@ -13,6 +13,7 @@
 		9553C8252BA0F1D400D4D10E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */; };
 		9553C82F2BA0F91900D4D10E /* CoursesVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */; };
 		9553C8312BA0FA5D00D4D10E /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */; };
+		956C33112BA2137D00AFBC90 /* CoursesHeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C33102BA2137D00AFBC90 /* CoursesHeroHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVCRepresentable.swift; sourceTree = "<group>"; };
 		9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
+		956C33102BA2137D00AFBC90 /* CoursesHeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesHeroHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +87,19 @@
 		9553C82C2BA0F31400D4D10E /* CourseScreenKit */ = {
 			isa = PBXGroup;
 			children = (
+				956C330F2BA2132400AFBC90 /* Views */,
 				9553C82E2BA0F91900D4D10E /* CoursesVCRepresentable.swift */,
 				9553C8302BA0FA5D00D4D10E /* CoursesVC.swift */,
 			);
 			path = CourseScreenKit;
+			sourceTree = "<group>";
+		};
+		956C330F2BA2132400AFBC90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				956C33102BA2137D00AFBC90 /* CoursesHeroHeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 				9553C82F2BA0F91900D4D10E /* CoursesVCRepresentable.swift in Sources */,
 				9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */,
 				9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */,
+				956C33112BA2137D00AFBC90 /* CoursesHeroHeaderView.swift in Sources */,
 				9553C8312BA0FA5D00D4D10E /* CoursesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

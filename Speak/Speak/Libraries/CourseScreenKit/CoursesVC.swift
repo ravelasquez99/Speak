@@ -21,7 +21,6 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         setupHeader()
         setupUnitsTableView()
         unitsTableView.backgroundColor = .purple
@@ -63,20 +62,20 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
 
     private func setupHeader() {
-        let tableHeaderView = heroHeaderView(unitsTableView, color: .yellow)
+        let tableHeaderView = heroHeaderView()
         tableHeaderView.frame = CGRect(
             x: 0,
             y: 0,
             width: view.bounds.width,
             height: heroHeaderHeight()
         )
-        tableHeaderView.backgroundColor = .yellow
 
         view.addSubview(tableHeaderView)
     }
 
     private func heroHeaderHeight() -> CGFloat {
-        return 200
+        //magic number with no layout file
+        return floor(view.bounds.height * 0.33) + view.safeAreaInsets.top
     }
 
     private func unitHeaderHeight() -> CGFloat {
@@ -173,21 +172,20 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     // MARK: - Tableview section headers
 
-    private func heroHeaderView(
-        _ tableView: UITableView,
-        color: UIColor
-    ) -> UIView {
-        let headerView = UIView(
+    private func heroHeaderView() -> UIView {
+        return CoursesHeroHeaderView(
             frame: CGRectMake(
                 0,
                 0,
                 view.bounds.width,
                 heroHeaderHeight()
-            )
+            ),
+            bannerImageName: "course-default-header-background",
+            //TODO get from model
+            circleImageURLString: "https://d34af8cfq8hdgo.cloudfront.net/images/courses/thumbnailImageUrl/te_1_thumbnailImage.jpg",
+            heroText: "바로 써먹는 여행영어 (필수)",
+            calloutText: "with Aurdey & Lana"
         )
-
-        headerView.backgroundColor = color //TODO
-        return headerView
     }
 }
 
