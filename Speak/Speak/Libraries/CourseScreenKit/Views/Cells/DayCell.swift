@@ -78,9 +78,19 @@ public final class DayCell: UITableViewCell {
             iconView.backgroundColor = isComplete
             ? SpeakColor.white
             : SpeakColor.coursesDayAndLine
+
+            topLineView.isHidden = isComplete
         }
     }
 
+    private var topLineView = UIView()
+    private var bottomLineView = UIView()
+
+    var isLastCell: Bool = false {
+        didSet {
+            bottomLineView.isHidden = isLastCell
+        }
+    }
 
     // MARK: - Container Views
 
@@ -180,6 +190,12 @@ public final class DayCell: UITableViewCell {
         subtitleLabel.lineBreakMode = .byTruncatingTail
         subtitleLabel.font = .systemFont(ofSize: 14)
         subtitleLabel.textColor = SpeakColor.coursesDayAndLine
+
+        // line setup
+        contentView.addSubview(topLineView)
+        contentView.addSubview(bottomLineView)
+        topLineView.backgroundColor = SpeakColor.coursesDayAndLine
+        bottomLineView.backgroundColor = SpeakColor.coursesDayAndLine
     }
 
 
@@ -206,6 +222,24 @@ public final class DayCell: UITableViewCell {
             dayLabelTop.frame.maxY,
             dayContainerView.bounds.width,
             dayLabelTop.frame.size.height * 2
+        )
+
+        //Layout line
+
+        let lineX = dayContainerView.frame.midX - 1
+        let linePadding: CGFloat = 8
+        topLineView.frame = CGRectMake(
+            lineX,
+            0,
+            1,
+            dayContainerView.frame.minY - linePadding
+        )
+
+        bottomLineView.frame = CGRectMake(
+            lineX,
+            dayContainerView.frame.maxY + linePadding,
+            1,
+            contentView.bounds.height - linePadding - dayContainerViewHeight - linePadding
         )
 
         // Layout data container view

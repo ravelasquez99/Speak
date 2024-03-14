@@ -156,8 +156,10 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
         // Normally I would check the array size.
         let dayNumber = indexPath.row - 1 // to account for unit cell
-        let day = course
+        let units = course
             .units[indexPath.section]
+
+        let day = units
             .days[dayNumber]
         
         /* 
@@ -170,6 +172,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.subtitle = day.subtitle
         cell.thumbnailImageURL = day.thumbnailImageURL
         cell.isComplete = dayNumber == 0 // This data is missing from the model
+        cell.isLastCell = dayNumber == (units.days.count - 1)
 
         return cell
     }
