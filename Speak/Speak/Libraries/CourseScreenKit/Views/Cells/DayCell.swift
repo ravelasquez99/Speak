@@ -70,7 +70,13 @@ public final class DayCell: UITableViewCell {
             style: style,
             reuseIdentifier: reuseIdentifier
         )
+        setup()
         addAndSetupSubviews()
+    }
+
+    private func setup() {
+        contentView.backgroundColor = UIColor.clear
+        self.backgroundColor = .clear
     }
 
     private func addAndSetupSubviews() {
