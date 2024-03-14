@@ -37,7 +37,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         setupHeader()
         setupUnitsTableView()
         view.backgroundColor = SpeakColor.standardViewBackground
-        unitsTableView.backgroundColor = .purple
+        unitsTableView.backgroundColor = .clear
     }
 
 
@@ -89,7 +89,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
 
     private func unitHeaderHeight() -> CGFloat {
-        return 100
+        return ceil(view.bounds.height * 0.15)
     }
 
     private func dayCellHeight() -> CGFloat {

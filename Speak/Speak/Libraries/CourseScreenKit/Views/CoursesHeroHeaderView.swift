@@ -13,6 +13,7 @@ public final class CoursesHeroHeaderView: UIView {
     private let bannerImageView: UIImageView
     private let circleImageView: UIImageView
     private let heroLabel: UILabel
+    private let heroLabelFont = UIFont.boldSystemFont(ofSize: 30)
     private let calloutLabel: UILabel
 
     public init(
@@ -45,7 +46,7 @@ public final class CoursesHeroHeaderView: UIView {
         heroLabel.text = heroText
         calloutLabel.text = calloutText
 
-        heroLabel.font = .preferredFont(forTextStyle: .largeTitle)
+        heroLabel.font = heroLabelFont
         heroLabel.textColor = SpeakColor.heroText
 
         calloutLabel.font = .preferredFont(forTextStyle: .callout)
@@ -98,7 +99,7 @@ public final class CoursesHeroHeaderView: UIView {
         )
 
         let heroLabelAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.preferredFont(forTextStyle: .largeTitle)
+            .font: heroLabelFont
         ]
         let heroLabelSize = (heroLabel.text! as NSString) // force unwrap for simplicity
             .size(withAttributes: heroLabelAttributes)

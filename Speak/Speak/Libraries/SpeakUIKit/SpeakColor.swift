@@ -29,4 +29,13 @@ public final class SpeakColor {
             alpha: 1.0
         )
     }
+
+    static var unitTitleText: UIColor {
+        return UIColor(
+            red: 133.0 / 255.0,
+            green: 133.0 / 255.0,
+            blue: 133.0 / 255.0,
+            alpha: 1.0
+        )
+    }
 }
