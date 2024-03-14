@@ -68,6 +68,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
         unitsTableView.backgroundColor = .clear
         unitsTableView.separatorStyle = .none
+        unitsTableView.showsVerticalScrollIndicator = false
 
         //Add to view
         view.addSubview(unitsTableView)
@@ -139,6 +140,8 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         unitCell.unitNumber = indexPath.section + 1
         // using id because there is no unit name in the json
         unitCell.unitName = course.units[indexPath.section].id
+        unitCell.isFirstUnit = indexPath.section == 0
+
         return unitCell
     }
 

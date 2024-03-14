@@ -31,6 +31,7 @@ public final class UnitCell: UITableViewCell {
 
     private let iconImageView = UIImageView()
 
+    var isFirstUnit: Bool = false
 
     // MARK: - Initialization
 
@@ -90,7 +91,7 @@ public final class UnitCell: UITableViewCell {
         let imageWidthAndHeight = CGFloat(50.0)
         iconImageView.frame = CGRectMake(
             middleX - (imageWidthAndHeight / 2),
-            0,
+            isFirstUnit ? 0 : 14,
             imageWidthAndHeight,
             imageWidthAndHeight
         )

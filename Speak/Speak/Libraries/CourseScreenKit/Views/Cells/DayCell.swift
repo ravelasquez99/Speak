@@ -249,7 +249,7 @@ public final class DayCell: UITableViewCell {
         )
 
         // Layout data container view
-        let dataContainerButtonHeight = floor(contentView.bounds.height * 0.95)
+        let dataContainerButtonHeight = floor(contentView.bounds.height * 0.87) //Magic Number
         dataContainerButton.frame = CGRectMake(
             dayContainerView.frame.maxX + 12,
             (contentView.bounds.height - dataContainerButtonHeight) / 2,
