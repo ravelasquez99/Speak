@@ -5,6 +5,7 @@
 //  Created by Richard Velasquez on 3/13/24.
 //
 
+import SwiftUI
 import UIKit
 
 public final class SpeakColor {
@@ -58,6 +59,15 @@ public final class SpeakColor {
             green: 237.0 / 255.0,
             blue: 237.0 / 255.0,
             alpha: 1.0
+        )
+    }
+    
+    static var coursesImageCircleColor: Color {
+        return Color(
+            red: 237.0 / 255.0,
+            green: 237.0 / 255.0,
+            blue: 237.0 / 255.0,
+            opacity: 1.0
         )
     }
 
