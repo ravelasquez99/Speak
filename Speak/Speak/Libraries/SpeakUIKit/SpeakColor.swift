@@ -56,4 +56,8 @@ public final class SpeakColor {
             alpha: 1.0
         )
     }
+
+    static var white: UIColor {
+        return .white
+    }
 }

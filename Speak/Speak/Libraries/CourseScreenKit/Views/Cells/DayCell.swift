@@ -58,18 +58,25 @@ public final class DayCell: UITableViewCell {
         }
     }
 
-    var isComplete: Bool? = false {
+    var isComplete: Bool = false {
         didSet {
-            dayLabelTop.textColor = SpeakColor.coursesDayToday
-            dayLabelBottom.textColor = SpeakColor.coursesDayToday
+            dayLabelTop.textColor = isComplete
+            ? SpeakColor.coursesDayToday
+            : SpeakColor.coursesDayAndLine
+            dayLabelBottom.textColor = isComplete
+            ? SpeakColor.coursesDayToday
+            : SpeakColor.coursesDayAndLine
         }
     }
-    
-    
+
+
     // MARK: - Container Views
 
     private let dayContainerView = UIView()
     private let dayContainerViewHeight: CGFloat = 40
+    
+    private let dataContainerView = UIView()
+    private let dataContainerViewHeight: CGFloat = 40
 
 
     // MARK: - Initialization
@@ -121,17 +128,24 @@ public final class DayCell: UITableViewCell {
         dayLabelBottom.font = .systemFont(ofSize: 30)
         dayLabelBottom.textColor = SpeakColor.coursesDayAndLine
 
-        //Image Setup
-        contentView.addSubview(imageAndIconView)
+        //Data container Setup
+        
+        contentView.addSubview(dataContainerView)
+        dataContainerView.backgroundColor = SpeakColor.white
+        dataContainerView.layer.cornerRadius = 16
+        dataContainerView.clipsToBounds = true
+        
+        dataContainerView.addSubview(imageAndIconView)
         imageAndIconView.addSubview(dayImageView)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(subtitleLabel)
+        dataContainerView.addSubview(titleLabel)
+        dataContainerView.addSubview(subtitleLabel)
     }
 
 
     // MARK: - Layout
 
     override public func layoutSubviews() {
+        // Layout day view
         dayContainerView.frame = CGRectMake(
             12,
             contentView.bounds.midY - (dayContainerViewHeight / 2),
@@ -151,6 +165,15 @@ public final class DayCell: UITableViewCell {
             dayLabelTop.frame.maxY,
             dayContainerView.bounds.width,
             dayLabelTop.frame.size.height * 2
+        )
+
+        // Layout data container view
+        let dataContainerHeight = floor(contentView.bounds.height * 0.95)
+        dataContainerView.frame = CGRectMake(
+            dayContainerView.frame.maxX + 12,
+            (contentView.bounds.height - dataContainerHeight) / 2,
+            floor(contentView.bounds.width * 0.8),
+            dataContainerHeight
         )
 
         imageAndIconView.frame = CGRectMake(
