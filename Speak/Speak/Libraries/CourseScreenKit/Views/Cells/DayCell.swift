@@ -13,10 +13,12 @@ public final class DayCell: UITableViewCell {
 
     // MARK: - Variables
 
-    private let dayLabel = UILabel()
+    private let dayLabelTop = UILabel()
+    private let dayLabelBottom = UILabel()
     var dayNumber: Int? = nil {
         didSet {
-            dayLabel.text = "Day \(dayNumber ?? 0)"
+            dayLabelBottom.text = "Day \(dayNumber ?? 0)"
+            isComplete = dayNumber == 0
         }
     }
 
@@ -50,7 +52,17 @@ public final class DayCell: UITableViewCell {
         }
     }
 
-    var isComplete: Bool? = false
+    var isComplete: Bool? = false {
+        didSet {
+            //TBD on the imageview
+        }
+    }
+    
+    
+    // MARK: - Container Views
+
+    private let dayContainerView = UIView()
+    private let dayContainerViewHeight: CGFloat = 50
 
 
     // MARK: - Initialization
@@ -80,27 +92,41 @@ public final class DayCell: UITableViewCell {
     }
 
     private func addAndSetupSubviews() {
-        contentView.addSubview(dayLabel)
+        contentView.addSubview(dayContainerView)
+        dayContainerView.addSubview(dayLabelTop)
+        dayContainerView.addSubview(dayLabelBottom)
+
         contentView.addSubview(imageAndIconView)
         imageAndIconView.addSubview(dayImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(subtitleLabel)
+
+        //Label Setup
     }
 
 
     // MARK: - Layout
 
     override public func layoutSubviews() {
-        super.layoutSubviews()
-        dayLabel.frame = CGRectMake(
+        dayContainerView.frame = CGRectMake(
             12,
-            contentView.bounds.midY - 40,
-            80,
-            20
+            contentView.bounds.midY - (dayContainerViewHeight / 2),
+            dayContainerViewHeight,
+            dayContainerViewHeight
         )
+        
+        dayContainerView.backgroundColor = UIColor.yellow
+
+//        dayLabelTop
+//        dayLabelBottom.frame = CGRectMake(
+//            12,
+//            contentView.bounds.midY - 40,
+//            80,
+//            20
+//        )
 
         imageAndIconView.frame = CGRectMake(
-            dayLabel.frame.maxX + 15,
+            dayContainerView.frame.maxX + 15,
             contentView.bounds.midY - 20,
             40,
             40
