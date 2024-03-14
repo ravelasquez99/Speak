@@ -13,6 +13,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     // MARK: - Variables
 
     let course: Course
+    let onDidTapDay: (Day) -> Void
     let unitsTableView = UITableView(frame: .zero, style: .plain)
     private static let unitCelllReuseIdentifier = "unitSectionHeaderReuseIdentifier"
     private static let dayCellReuseIdentifier = "dayCellReuseIdentifier"
@@ -20,8 +21,12 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     // MARK: - Init
 
-    init(course: Course) {
+    init(
+        course: Course,
+        onDidTapDay: @escaping (Day) -> Void
+    ) {
         self.course = course
+        self.onDidTapDay = onDidTapDay
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -176,8 +181,8 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.thumbnailImageURL = day.thumbnailImageURL
         cell.isComplete = dayNumber == 0 // This data is missing from the model
         cell.isLastCell = dayNumber == (units.days.count - 1)
-        cell.onTap = {
-            print("did press day \(day.subtitle)")
+        cell.onTap = { [weak self] in
+            self?.onDidTapDay(day)
         }
 
         return cell

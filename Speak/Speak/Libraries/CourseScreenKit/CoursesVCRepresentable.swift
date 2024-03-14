@@ -9,6 +9,8 @@ import SwiftUI
 import UIKit
 
 struct CoursesVCRepresentable: UIViewControllerRepresentable {
+    let onDidTapDay: (Day) -> Void
+
     func makeUIViewController(
         context: Context
     ) -> CoursesVC {
@@ -19,7 +21,10 @@ struct CoursesVCRepresentable: UIViewControllerRepresentable {
             fatalError("No course json")
         }
 
-        return CoursesVC(course: course)
+        return CoursesVC(
+            course: course,
+            onDidTapDay: onDidTapDay
+        )
     }
     
     func updateUIViewController(

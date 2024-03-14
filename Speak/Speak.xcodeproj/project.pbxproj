@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9541A84F2BA3871400C29F80 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A84E2BA3871400C29F80 /* RecordView.swift */; };
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
 		9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81E2BA0F1D300D4D10E /* FirstView.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9541A84E2BA3871400C29F80 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		9553C8192BA0F1D300D4D10E /* Speak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakApp.swift; sourceTree = "<group>"; };
 		9553C81E2BA0F1D300D4D10E /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9541A84D2BA386FB00C29F80 /* RecordScreenKit */ = {
+			isa = PBXGroup;
+			children = (
+				9541A84E2BA3871400C29F80 /* RecordView.swift */,
+			);
+			path = RecordScreenKit;
+			sourceTree = "<group>";
+		};
 		9553C8102BA0F1D300D4D10E = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 			children = (
 				9553C82C2BA0F31400D4D10E /* CourseScreenKit */,
 				95F339D42BA24D7200A56E29 /* DataRetrievalKit */,
+				9541A84D2BA386FB00C29F80 /* RecordScreenKit */,
 				95F339CF2BA23EB800A56E29 /* SpeakUIKit */,
 			);
 			path = Libraries;
@@ -237,6 +248,7 @@
 				95F339D92BA24F6B00A56E29 /* Course.swift in Sources */,
 				9553C82F2BA0F91900D4D10E /* CoursesVCRepresentable.swift in Sources */,
 				95F339DE2BA258ED00A56E29 /* DayCell.swift in Sources */,
+				9541A84F2BA3871400C29F80 /* RecordView.swift in Sources */,
 				95F339D62BA24E2800A56E29 /* LocalJsonRetriever.swift in Sources */,
 				9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */,
 				95F339DC2BA2553500A56E29 /* UnitCell.swift in Sources */,

@@ -37,7 +37,14 @@ struct Unit: Codable {
 }
 
 // MARK: - Day
-struct Day: Codable {
+struct Day: Codable, Hashable {
+    static func == (
+        lhs: Day,
+        rhs: Day
+    ) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     let id, title: String
     let thumbnailImageURL: String
     let subtitle: String
@@ -51,7 +58,7 @@ struct Day: Codable {
 }
 
 // MARK: - Lesson
-struct Lesson: Codable {
+struct Lesson: Codable, Hashable {
     let id, title: String
     let durationMin: Int
 }
