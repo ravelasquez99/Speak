@@ -44,6 +44,8 @@ public final class DayCell: UITableViewCell {
 
     private let imageAndIconView = UIView()
     private let dayImageView = UIImageView()
+    private let iconView = UIImageView()
+
     var thumbnailImageURL: String? = nil {
         didSet {
             guard let urlString = thumbnailImageURL else {
@@ -134,9 +136,14 @@ public final class DayCell: UITableViewCell {
         dataContainerView.backgroundColor = SpeakColor.white
         dataContainerView.layer.cornerRadius = 16
         dataContainerView.clipsToBounds = true
-        
+
+        //Image & Icon setup
         dataContainerView.addSubview(imageAndIconView)
         imageAndIconView.addSubview(dayImageView)
+        dayImageView.contentMode = .scaleAspectFill
+        dayImageView.layer.borderWidth = 2 // Using layers can sometimes be bad for performance
+        dayImageView.layer.borderColor = SpeakColor.coursesImageCircle.cgColor
+        
         dataContainerView.addSubview(titleLabel)
         dataContainerView.addSubview(subtitleLabel)
     }
@@ -177,12 +184,14 @@ public final class DayCell: UITableViewCell {
         )
 
         imageAndIconView.frame = CGRectMake(
-            dayContainerView.frame.maxX + 15,
-            contentView.bounds.midY - 20,
-            40,
-            40
+            15,
+            dataContainerView.bounds.midY - 40,
+            80,
+            80
         )
         dayImageView.frame = imageAndIconView.bounds
+        dayImageView.layer.cornerRadius = dayImageView.bounds.width / 2
+        dayImageView.clipsToBounds = true
 
         titleLabel.frame = CGRectMake(
             imageAndIconView.frame.maxX + 15,
