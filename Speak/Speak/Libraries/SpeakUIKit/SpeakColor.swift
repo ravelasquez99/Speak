@@ -48,6 +48,10 @@ public final class SpeakColor {
         )
     }
 
+    static var coursesTitle: UIColor {
+        return .black
+    }
+
     static var coursesImageCircle: UIColor {
         return UIColor(
             red: 237.0 / 255.0,

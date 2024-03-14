@@ -141,11 +141,28 @@ public final class DayCell: UITableViewCell {
         dataContainerView.addSubview(imageAndIconView)
         imageAndIconView.addSubview(dayImageView)
         dayImageView.contentMode = .scaleAspectFill
-        dayImageView.layer.borderWidth = 2 // Using layers can sometimes be bad for performance
+        dayImageView.layer.borderWidth = 4 // Using layers can sometimes be bad for performance
         dayImageView.layer.borderColor = SpeakColor.coursesImageCircle.cgColor
-        
+
+        //Title and subtitle labels
         dataContainerView.addSubview(titleLabel)
         dataContainerView.addSubview(subtitleLabel)
+
+        titleLabel.adjustsFontSizeToFitWidth = false
+        titleLabel.minimumScaleFactor = 1 // Not good for accesibility
+        titleLabel.textAlignment = .left
+        titleLabel.numberOfLines = 1
+        titleLabel.lineBreakMode = .byTruncatingTail
+        titleLabel.font = .boldSystemFont(ofSize: 18)
+        titleLabel.textColor = SpeakColor.coursesTitle
+
+        subtitleLabel.adjustsFontSizeToFitWidth = false
+        subtitleLabel.minimumScaleFactor = 0.75 // Not good for accesibility
+        subtitleLabel.textAlignment = .left
+        subtitleLabel.numberOfLines = 2
+        subtitleLabel.lineBreakMode = .byTruncatingTail
+        subtitleLabel.font = .systemFont(ofSize: 14)
+        subtitleLabel.textColor = SpeakColor.coursesDayAndLine
     }
 
 
@@ -194,16 +211,22 @@ public final class DayCell: UITableViewCell {
         dayImageView.clipsToBounds = true
 
         titleLabel.frame = CGRectMake(
-            imageAndIconView.frame.maxX + 15,
-            contentView.bounds.midY - 20,
-            400,
-            40
+            dayImageView.frame.maxX + 30,
+            (dataContainerHeight / 2) - 20,
+            dataContainerView.bounds.width
+            - dayImageView.frame.width
+            - 30 //padding for image on each side
+            - 15, // keeping even padding on right side
+            20
         )
 
         subtitleLabel.frame = CGRectMake(
-            imageAndIconView.frame.maxX + 15,
-            titleLabel.frame.maxY + 4,
-            300,
+            dayImageView.frame.maxX + 30,
+            (dataContainerHeight / 2),
+            dataContainerView.bounds.width
+            - dayImageView.frame.width
+            - 30 //padding for image on each side
+            - 15, // keeping even padding on right side,
             40
         )
     }
