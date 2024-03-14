@@ -22,10 +22,10 @@ public final class UnitCell: UITableViewCell {
     }
 
     private let nameLabel = UILabel()
-    private let nameLabelStyle: UIFont.TextStyle = .body
+    private let nameLabelStyle: UIFont.TextStyle = .subheadline
     var unitName: String? = nil {
         didSet {
-            nameLabel.text = unitName
+            nameLabel.text = "\(unitName ?? "") subtitle (N/A)"
         }
     }
 
