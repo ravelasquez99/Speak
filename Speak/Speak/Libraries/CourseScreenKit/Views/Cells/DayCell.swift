@@ -92,11 +92,14 @@ public final class DayCell: UITableViewCell {
         }
     }
 
+    var onTap: (() -> Void)? = nil
+
     // MARK: - Container Views
 
     private let dayContainerView = UIView()
     private let dayContainerViewHeight: CGFloat = 40
-    
+
+    private let dataContainerButton = UIButton(type: .custom)
     private let dataContainerView = UIView()
     private let dataContainerViewHeight: CGFloat = 40
 
@@ -152,7 +155,10 @@ public final class DayCell: UITableViewCell {
 
         //Data container Setup
         
-        contentView.addSubview(dataContainerView)
+        contentView.addSubview(dataContainerButton)
+        dataContainerButton.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
+        dataContainerButton.addSubview(dataContainerView)
+        dataContainerView.isUserInteractionEnabled = false // If I had more time I would make the tap action highight the cell
         dataContainerView.backgroundColor = SpeakColor.white
         dataContainerView.layer.cornerRadius = 16
         dataContainerView.clipsToBounds = true
@@ -243,13 +249,15 @@ public final class DayCell: UITableViewCell {
         )
 
         // Layout data container view
-        let dataContainerHeight = floor(contentView.bounds.height * 0.95)
-        dataContainerView.frame = CGRectMake(
+        let dataContainerButtonHeight = floor(contentView.bounds.height * 0.95)
+        dataContainerButton.frame = CGRectMake(
             dayContainerView.frame.maxX + 12,
-            (contentView.bounds.height - dataContainerHeight) / 2,
+            (contentView.bounds.height - dataContainerButtonHeight) / 2,
             floor(contentView.bounds.width * 0.8),
-            dataContainerHeight
+            dataContainerButtonHeight
         )
+
+        dataContainerView.frame = dataContainerButton.bounds
 
         imageAndIconView.frame = CGRectMake(
             15,
@@ -272,7 +280,7 @@ public final class DayCell: UITableViewCell {
 
         titleLabel.frame = CGRectMake(
             dayImageView.frame.maxX + 30,
-            (dataContainerHeight / 2) - 20,
+            (dataContainerButtonHeight / 2) - 20,
             dataContainerView.bounds.width
             - dayImageView.frame.width
             - 30 //padding for image on each side
@@ -282,12 +290,19 @@ public final class DayCell: UITableViewCell {
 
         subtitleLabel.frame = CGRectMake(
             dayImageView.frame.maxX + 30,
-            (dataContainerHeight / 2),
+            (dataContainerButtonHeight / 2),
             dataContainerView.bounds.width
             - dayImageView.frame.width
             - 30 //padding for image on each side
             - 15, // keeping even padding on right side,
             40
         )
+    }
+
+    
+    // MARK: - Button Pressed
+
+    @objc func pressButton(button: UIButton) {
+        onTap?()
     }
 }

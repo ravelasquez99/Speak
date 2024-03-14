@@ -173,6 +173,9 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.thumbnailImageURL = day.thumbnailImageURL
         cell.isComplete = dayNumber == 0 // This data is missing from the model
         cell.isLastCell = dayNumber == (units.days.count - 1)
+        cell.onTap = {
+            print("did press day \(day.subtitle)")
+        }
 
         return cell
     }
