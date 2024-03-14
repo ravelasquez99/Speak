@@ -51,11 +51,7 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             view.bounds.width,
             view.bounds.height - heroHeaderHeight()
         )
-        unitsTableView.sectionHeaderTopPadding = 0 //rickyv123 remove
-
-        //Color
-        unitsTableView.layer.borderWidth = 1.0
-        unitsTableView.layer.borderColor = UIColor.red.cgColor
+        unitsTableView.sectionHeaderTopPadding = 0
 
         //Setup
         unitsTableView.dataSource = self
