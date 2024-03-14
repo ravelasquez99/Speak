@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RecordView: View {
     @State var isSaved: Bool = false
+    @StateObject private var viewModel = RecordViewModel()
+
     var body: some View {
         VStack {
             HStack {
@@ -23,7 +25,7 @@ struct RecordView: View {
                 })
             }
 
-            Text("A table for two")
+            Text(viewModel.receivedText)
                 .padding(.top)
                 .padding(.top)
                 .padding(.top)
@@ -33,7 +35,7 @@ struct RecordView: View {
             HStack {
                 Button(
                     action: {
-                        refresh()
+                        viewModel.disconnectWebSocket()
                     },
                     label: {
                         Image("back-arrow", bundle: nil)
@@ -53,7 +55,7 @@ struct RecordView: View {
 
                 Button(
                     action: {
-                        refresh()
+                        viewModel.connectToWebSocket()
                     },
                     label: {
                         Image("recording-icon", bundle: nil)
@@ -79,8 +81,6 @@ struct RecordView: View {
             }
         }.padding()
     }
-
-    private func refresh() {}
 
     private var circleColor: Color {
         return SpeakColor.coursesImageCircleColor

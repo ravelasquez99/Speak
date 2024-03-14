@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9541A84F2BA3871400C29F80 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A84E2BA3871400C29F80 /* RecordView.swift */; };
+		9541A8542BA3B04B00C29F80 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8532BA3B04B00C29F80 /* WebSocketManager.swift */; };
+		9541A8562BA3B2AA00C29F80 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8552BA3B2AA00C29F80 /* RecordViewModel.swift */; };
+		9541A8582BA3B61000C29F80 /* ASREvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8572BA3B61000C29F80 /* ASREvent.swift */; };
+		9541A85A2BA3BDE300C29F80 /* WebRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8592BA3BDE300C29F80 /* WebRequestBuilder.swift */; };
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
 		9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81E2BA0F1D300D4D10E /* FirstView.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		9541A84E2BA3871400C29F80 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		9541A8532BA3B04B00C29F80 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		9541A8552BA3B2AA00C29F80 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
+		9541A8572BA3B61000C29F80 /* ASREvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASREvent.swift; sourceTree = "<group>"; };
+		9541A8592BA3BDE300C29F80 /* WebRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestBuilder.swift; sourceTree = "<group>"; };
 		9553C8192BA0F1D300D4D10E /* Speak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakApp.swift; sourceTree = "<group>"; };
 		9553C81E2BA0F1D300D4D10E /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
@@ -60,9 +68,28 @@
 		9541A84D2BA386FB00C29F80 /* RecordScreenKit */ = {
 			isa = PBXGroup;
 			children = (
+				9541A8502BA3AFFD00C29F80 /* ViewModel */,
 				9541A84E2BA3871400C29F80 /* RecordView.swift */,
 			);
 			path = RecordScreenKit;
+			sourceTree = "<group>";
+		};
+		9541A8502BA3AFFD00C29F80 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9541A8552BA3B2AA00C29F80 /* RecordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9541A8522BA3B03500C29F80 /* SpeakAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9541A8532BA3B04B00C29F80 /* WebSocketManager.swift */,
+				9541A8572BA3B61000C29F80 /* ASREvent.swift */,
+				9541A8592BA3BDE300C29F80 /* WebRequestBuilder.swift */,
+			);
+			path = SpeakAPI;
 			sourceTree = "<group>";
 		};
 		9553C8102BA0F1D300D4D10E = {
@@ -109,6 +136,7 @@
 				9553C82C2BA0F31400D4D10E /* CourseScreenKit */,
 				95F339D42BA24D7200A56E29 /* DataRetrievalKit */,
 				9541A84D2BA386FB00C29F80 /* RecordScreenKit */,
+				9541A8522BA3B03500C29F80 /* SpeakAPI */,
 				95F339CF2BA23EB800A56E29 /* SpeakUIKit */,
 			);
 			path = Libraries;
@@ -253,9 +281,13 @@
 				9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */,
 				95F339DC2BA2553500A56E29 /* UnitCell.swift in Sources */,
 				9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */,
+				9541A85A2BA3BDE300C29F80 /* WebRequestBuilder.swift in Sources */,
+				9541A8562BA3B2AA00C29F80 /* RecordViewModel.swift in Sources */,
 				956C33112BA2137D00AFBC90 /* CoursesHeroHeaderView.swift in Sources */,
+				9541A8582BA3B61000C29F80 /* ASREvent.swift in Sources */,
 				95F339D12BA23EC900A56E29 /* SpeakColor.swift in Sources */,
 				9553C8312BA0FA5D00D4D10E /* CoursesVC.swift in Sources */,
+				9541A8542BA3B04B00C29F80 /* WebSocketManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
