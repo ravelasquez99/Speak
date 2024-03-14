@@ -17,7 +17,13 @@ public final class DayCell: UITableViewCell {
     private let dayLabelBottom = UILabel()
     var dayNumber: Int? = nil {
         didSet {
-            dayLabelBottom.text = "Day \(dayNumber ?? 0)"
+            let theDayNumber = dayNumber ?? 0
+            var dayString = "\(theDayNumber)"
+            if theDayNumber < 10 {
+                dayString = "0" + dayString
+            }
+
+            dayLabelBottom.text = dayString
             isComplete = dayNumber == 0
         }
     }
@@ -54,7 +60,8 @@ public final class DayCell: UITableViewCell {
 
     var isComplete: Bool? = false {
         didSet {
-            //TBD on the imageview
+            dayLabelTop.textColor = SpeakColor.coursesDayToday
+            dayLabelBottom.textColor = SpeakColor.coursesDayToday
         }
     }
     
@@ -62,7 +69,7 @@ public final class DayCell: UITableViewCell {
     // MARK: - Container Views
 
     private let dayContainerView = UIView()
-    private let dayContainerViewHeight: CGFloat = 50
+    private let dayContainerViewHeight: CGFloat = 40
 
 
     // MARK: - Initialization
@@ -93,15 +100,32 @@ public final class DayCell: UITableViewCell {
 
     private func addAndSetupSubviews() {
         contentView.addSubview(dayContainerView)
+
+        //Label Setup
         dayContainerView.addSubview(dayLabelTop)
         dayContainerView.addSubview(dayLabelBottom)
+        dayLabelTop.adjustsFontSizeToFitWidth = false
+        dayLabelTop.minimumScaleFactor = 1
+        dayLabelTop.textAlignment = .center
+        dayLabelTop.numberOfLines = 1
+        dayLabelTop.lineBreakMode = .byTruncatingTail
+        dayLabelTop.font = .systemFont(ofSize: 16)
+        dayLabelTop.textColor = SpeakColor.coursesDayAndLine
+        dayLabelTop.text = "DAY" //TODO Needs localication
+        
+        dayLabelBottom.adjustsFontSizeToFitWidth = false
+        dayLabelBottom.minimumScaleFactor = 1
+        dayLabelBottom.textAlignment = .center
+        dayLabelBottom.numberOfLines = 1
+        dayLabelBottom.lineBreakMode = .byTruncatingTail
+        dayLabelBottom.font = .systemFont(ofSize: 30)
+        dayLabelBottom.textColor = SpeakColor.coursesDayAndLine
 
+        //Image Setup
         contentView.addSubview(imageAndIconView)
         imageAndIconView.addSubview(dayImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(subtitleLabel)
-
-        //Label Setup
     }
 
 
@@ -114,16 +138,20 @@ public final class DayCell: UITableViewCell {
             dayContainerViewHeight,
             dayContainerViewHeight
         )
-        
-        dayContainerView.backgroundColor = UIColor.yellow
 
-//        dayLabelTop
-//        dayLabelBottom.frame = CGRectMake(
-//            12,
-//            contentView.bounds.midY - 40,
-//            80,
-//            20
-//        )
+        dayLabelTop.frame = CGRectMake(
+            0,
+            0,
+            dayContainerView.bounds.width,
+            floor(dayContainerView.bounds.height / 3)
+        )
+
+        dayLabelBottom.frame = CGRectMake(
+            0,
+            dayLabelTop.frame.maxY,
+            dayContainerView.bounds.width,
+            dayLabelTop.frame.size.height * 2
+        )
 
         imageAndIconView.frame = CGRectMake(
             dayContainerView.frame.maxX + 15,

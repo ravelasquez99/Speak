@@ -38,4 +38,22 @@ public final class SpeakColor {
             alpha: 1.0
         )
     }
+
+    static var coursesDayAndLine: UIColor {
+        return UIColor(
+            red: 184.0 / 255.0,
+            green: 184.0 / 255.0,
+            blue: 184.0 / 255.0,
+            alpha: 1.0
+        )
+    }
+
+    static var coursesDayToday: UIColor {
+        return UIColor(
+            red: 12.0 / 255.0,
+            green: 73 / 255.0,
+            blue: 255.0 / 255.0,
+            alpha: 1.0
+        )
+    }
 }
