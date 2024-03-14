@@ -37,7 +37,6 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         setupHeader()
         setupUnitsTableView()
         view.backgroundColor = SpeakColor.standardViewBackground
-        unitsTableView.backgroundColor = .clear
     }
 
 
@@ -66,6 +65,9 @@ final class CoursesVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             UnitCell.self,
             forCellReuseIdentifier: Self.unitCelllReuseIdentifier
         )
+
+        unitsTableView.backgroundColor = .clear
+        unitsTableView.separatorStyle = .none
 
         //Add to view
         view.addSubview(unitsTableView)
