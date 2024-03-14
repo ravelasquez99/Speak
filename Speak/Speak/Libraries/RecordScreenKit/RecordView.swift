@@ -80,9 +80,7 @@ struct RecordView: View {
         }.padding()
     }
 
-    private func refresh() {
-        
-    }
+    private func refresh() {}
 
     private var circleColor: Color {
         return SpeakColor.coursesImageCircleColor
