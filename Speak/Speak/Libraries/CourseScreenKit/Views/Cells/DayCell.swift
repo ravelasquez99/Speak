@@ -68,6 +68,16 @@ public final class DayCell: UITableViewCell {
             dayLabelBottom.textColor = isComplete
             ? SpeakColor.coursesDayToday
             : SpeakColor.coursesDayAndLine
+
+            iconView.image = UIImage(
+                named: isComplete
+                ? "checkmark-green-icon"
+                : "course-unit-default-icon"
+            )?.withRenderingMode(.alwaysTemplate)
+            
+            iconView.backgroundColor = isComplete
+            ? SpeakColor.white
+            : SpeakColor.coursesDayAndLine
         }
     }
 
@@ -140,9 +150,16 @@ public final class DayCell: UITableViewCell {
         //Image & Icon setup
         dataContainerView.addSubview(imageAndIconView)
         imageAndIconView.addSubview(dayImageView)
+        imageAndIconView.addSubview(iconView)
         dayImageView.contentMode = .scaleAspectFill
         dayImageView.layer.borderWidth = 4 // Using layers can sometimes be bad for performance
         dayImageView.layer.borderColor = SpeakColor.coursesImageCircle.cgColor
+        
+        iconView.contentMode = .scaleAspectFill
+        iconView.layer.borderWidth = 2 // Using layers can sometimes be bad for performance
+        iconView.layer.borderColor = SpeakColor.white.cgColor
+        iconView.tintColor = SpeakColor.coursesImageCircle
+        
 
         //Title and subtitle labels
         dataContainerView.addSubview(titleLabel)
@@ -209,6 +226,15 @@ public final class DayCell: UITableViewCell {
         dayImageView.frame = imageAndIconView.bounds
         dayImageView.layer.cornerRadius = dayImageView.bounds.width / 2
         dayImageView.clipsToBounds = true
+        
+        iconView.frame = CGRectMake(
+            0,
+            dayImageView.bounds.height - 34,
+            34,
+            34
+        )
+        iconView.layer.cornerRadius = iconView.bounds.width / 2
+        iconView.clipsToBounds = true
 
         titleLabel.frame = CGRectMake(
             dayImageView.frame.maxX + 30,
