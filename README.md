@@ -12,3 +12,5 @@ Architecturally, I decided I wanted a tableview structure with a hero banner at 
 
 I also build out a mock class for colors, added SDWebimage for a dependency (although I did not handle image loading or failure to load states).
 
+*Callouts*
+I did not really focus on fonts, accessibility or localization. All things that would be needed in a production app
