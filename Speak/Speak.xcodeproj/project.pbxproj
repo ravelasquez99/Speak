@@ -12,6 +12,7 @@
 		9541A8562BA3B2AA00C29F80 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8552BA3B2AA00C29F80 /* RecordViewModel.swift */; };
 		9541A8582BA3B61000C29F80 /* ASREvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8572BA3B61000C29F80 /* ASREvent.swift */; };
 		9541A85A2BA3BDE300C29F80 /* WebRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541A8592BA3BDE300C29F80 /* WebRequestBuilder.swift */; };
+		9541A85C2BA3C4B400C29F80 /* asr-stream-audio-chunks.json in Resources */ = {isa = PBXBuildFile; fileRef = 9541A85B2BA3C4B400C29F80 /* asr-stream-audio-chunks.json */; };
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
 		9553C81F2BA0F1D300D4D10E /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81E2BA0F1D300D4D10E /* FirstView.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		9541A8552BA3B2AA00C29F80 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
 		9541A8572BA3B61000C29F80 /* ASREvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASREvent.swift; sourceTree = "<group>"; };
 		9541A8592BA3BDE300C29F80 /* WebRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequestBuilder.swift; sourceTree = "<group>"; };
+		9541A85B2BA3C4B400C29F80 /* asr-stream-audio-chunks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "asr-stream-audio-chunks.json"; sourceTree = "<group>"; };
 		9553C8192BA0F1D300D4D10E /* Speak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakApp.swift; sourceTree = "<group>"; };
 		9553C81E2BA0F1D300D4D10E /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				9553C8202BA0F1D400D4D10E /* Assets.xcassets */,
 				95F339D22BA24D5D00A56E29 /* course.json */,
+				9541A85B2BA3C4B400C29F80 /* asr-stream-audio-chunks.json */,
 				9553C81E2BA0F1D300D4D10E /* FirstView.swift */,
 				9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */,
 				9553C8222BA0F1D400D4D10E /* Speak.entitlements */,
@@ -263,6 +266,7 @@
 				9553C8252BA0F1D400D4D10E /* Preview Assets.xcassets in Resources */,
 				9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */,
 				95F339D32BA24D5D00A56E29 /* course.json in Resources */,
+				9541A85C2BA3C4B400C29F80 /* asr-stream-audio-chunks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

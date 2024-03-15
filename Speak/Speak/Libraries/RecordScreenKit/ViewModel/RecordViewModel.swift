@@ -13,15 +13,18 @@ public final class RecordViewModel: ObservableObject {
 
     // MARK: - API
 
-    @Published var receivedText: String = "A table for two"
+    @Published var receivedText: String = ""
+    @Published var isProcessing = false
     
     public func connectToWebSocket() {
         webSocketManager?.disconnect()
 
+        isProcessing = true
         webSocketManager = WebSocketManager()
-        webSocketManager?.onReceivedMessage = { [weak self] message in
+        webSocketManager?.onReceivedMessageAndIsFinal = { [weak self] (message, final) in
             DispatchQueue.main.async {
                 self?.receivedText = message
+                self?.isProcessing = !final
             }
         }
 

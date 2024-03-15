@@ -15,6 +15,7 @@ public struct ASREvent: Codable {
     public let recordingId: String?
     public let metadata: ASRMetadata?
     public let chunk: String?
+    public let text: String?
     public let isFinal: Bool?
 
     public init(
@@ -25,6 +26,7 @@ public struct ASREvent: Codable {
         recordingId: String? = nil,
         metadata: ASRMetadata? = nil,
         chunk: String? = nil,
+        text: String? = nil,
         isFinal: Bool? = nil
     ) {
         self.type = type
@@ -34,6 +36,7 @@ public struct ASREvent: Codable {
         self.recordingId = recordingId
         self.metadata = metadata
         self.chunk = chunk
+        self.text = text
         self.isFinal = isFinal
     }
 }

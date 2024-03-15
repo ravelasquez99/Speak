@@ -26,6 +26,7 @@ struct RecordView: View {
             }
 
             Text(viewModel.receivedText)
+                .font(.largeTitle)
                 .padding(.top)
                 .padding(.top)
                 .padding(.top)
@@ -70,7 +71,8 @@ struct RecordView: View {
                             )
                             
                     }
-                ).padding(.horizontal)
+                ).disabled(viewModel.isProcessing)
+                .padding(.horizontal)
 
                 // invisible button to center the upload button
                 Button(action: {}, label: {
