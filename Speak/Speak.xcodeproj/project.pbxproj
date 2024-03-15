@@ -70,8 +70,8 @@
 		9541A84D2BA386FB00C29F80 /* RecordScreenKit */ = {
 			isa = PBXGroup;
 			children = (
-				9541A8502BA3AFFD00C29F80 /* ViewModel */,
 				9541A84E2BA3871400C29F80 /* RecordView.swift */,
+				9541A8502BA3AFFD00C29F80 /* ViewModel */,
 			);
 			path = RecordScreenKit;
 			sourceTree = "<group>";

@@ -15,3 +15,18 @@ I also build out a mock class for colors, added SDWebimage for a dependency (alt
 **Callouts:**
 
 I did not really focus on fonts, accessibility or localization. All things that would be needed in a production app
+
+# About Screen 2
+For this screen I mostly focused on getting the sockets working and processing them. After getting the navigation to the screen done I had to ramp up on web sockets / streaming (hadn't done it before).
+
+It was pretty fun to learn. I think with more time I would have written unit tests of the stream processing and done more with errors other than print them.
+
+I once again commented my thoughts when it made sense.
+
+On the SwiftUI side it was pretty straightforward. I didn't know what the save button was supposed to do or the refresh. For the refresh I just decided to pause the stream and start over.
+
+**Callouts:**
+
+One again, I did not really focus on fonts, accessibility or localization. All things that would be needed in a production app.
+
+I also would have done more than log errors.

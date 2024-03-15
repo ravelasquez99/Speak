@@ -35,7 +35,7 @@ public final class RecordViewModel: ObservableObject {
         webSocketManager?.disconnect()
     }
 
-    
+
     // MARK: - Private Vars
 
     private var webSocketManager: WebSocketManager?
