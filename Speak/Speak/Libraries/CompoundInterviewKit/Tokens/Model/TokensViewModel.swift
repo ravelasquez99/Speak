@@ -1,19 +1,19 @@
 //
-//  FirstCompoundViewModel.swift
+//  TokensViewModel.swift
 //  Speak
 //
-//  Created by Richard Velasquez on 3/20/24.
+//  Created by Richard Velasquez on 3/21/24.
 //
 
-import Combine
 import Foundation
+import Combine
 
-public final class FirstCompoundViewModel: NSObject, ObservableObject {
+final class TokensViewModel: NSObject, ObservableObject {
     private let urlString: String
-    @Published public var fact: String? = nil
-    private var cancellables : Set<AnyCancellable> = []
+    @Published var tokens: Tokens? = nil
+    private var cancellables: Set<AnyCancellable> = []
 
-    public init(
+    init(
         urlString: String
     ) {
         self.urlString = urlString
@@ -25,14 +25,14 @@ public final class FirstCompoundViewModel: NSObject, ObservableObject {
         GenericNetworker.makeRequest(
             urlString: urlString,
             input: nil,
-            output: CatFacts.self,
+            output: Tokens.self,
             method: "GET"
         ).receive(
             on: DispatchQueue.main
         ).sink { completion in
             return
-        } receiveValue: { facts in
-            self.fact = facts.data.first
+        } receiveValue: { [weak self] tokens in
+            self?.tokens = tokens
         }.store(in: &cancellables)
     }
 }

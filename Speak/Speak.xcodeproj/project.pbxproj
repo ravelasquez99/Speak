@@ -18,6 +18,12 @@
 		954903472BABB29B00A76F78 /* FirstCompoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903462BABB29B00A76F78 /* FirstCompoundView.swift */; };
 		9549034A2BABB30E00A76F78 /* FirstCompoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903492BABB30E00A76F78 /* FirstCompoundViewModel.swift */; };
 		9549034C2BABB40A00A76F78 /* CatFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549034B2BABB40A00A76F78 /* CatFacts.swift */; };
+		9549034E2BAC927300A76F78 /* TokensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549034D2BAC927300A76F78 /* TokensView.swift */; };
+		954903522BAC92F600A76F78 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903512BAC92F600A76F78 /* Tokens.swift */; };
+		954903542BAC935A00A76F78 /* TokensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903532BAC935A00A76F78 /* TokensViewModel.swift */; };
+		9549035A2BAC954C00A76F78 /* TokensCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903592BAC954C00A76F78 /* TokensCardView.swift */; };
+		9549035C2BAC964A00A76F78 /* TokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549035B2BAC964A00A76F78 /* TokenView.swift */; };
+		9549035F2BAC9B4100A76F78 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9549035E2BAC9B4100A76F78 /* SDWebImageSwiftUI */; };
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
 		9553C81F2BA0F1D300D4D10E /* FirstSpeakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81E2BA0F1D300D4D10E /* FirstSpeakView.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
@@ -47,6 +53,11 @@
 		954903462BABB29B00A76F78 /* FirstCompoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompoundView.swift; sourceTree = "<group>"; };
 		954903492BABB30E00A76F78 /* FirstCompoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompoundViewModel.swift; sourceTree = "<group>"; };
 		9549034B2BABB40A00A76F78 /* CatFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFacts.swift; sourceTree = "<group>"; };
+		9549034D2BAC927300A76F78 /* TokensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensView.swift; sourceTree = "<group>"; };
+		954903512BAC92F600A76F78 /* Tokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		954903532BAC935A00A76F78 /* TokensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewModel.swift; sourceTree = "<group>"; };
+		954903592BAC954C00A76F78 /* TokensCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensCardView.swift; sourceTree = "<group>"; };
+		9549035B2BAC964A00A76F78 /* TokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenView.swift; sourceTree = "<group>"; };
 		9553C8192BA0F1D300D4D10E /* Speak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakApp.swift; sourceTree = "<group>"; };
 		9553C81E2BA0F1D300D4D10E /* FirstSpeakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSpeakView.swift; sourceTree = "<group>"; };
@@ -69,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9549035F2BAC9B4100A76F78 /* SDWebImageSwiftUI in Frameworks */,
 				95F339CE2BA2204A00A56E29 /* SDWebImageMapKit in Frameworks */,
 				95F339CC2BA2204A00A56E29 /* SDWebImage in Frameworks */,
 			);
@@ -116,11 +128,63 @@
 		954903482BABB2D900A76F78 /* CompoundInterviewKit */ = {
 			isa = PBXGroup;
 			children = (
+				954903562BAC945A00A76F78 /* Old */,
+				9549034F2BAC927600A76F78 /* Tokens */,
+			);
+			path = CompoundInterviewKit;
+			sourceTree = "<group>";
+		};
+		9549034F2BAC927600A76F78 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				954903552BAC945100A76F78 /* View */,
+				954903502BAC92EF00A76F78 /* Model */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		954903502BAC92EF00A76F78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				954903512BAC92F600A76F78 /* Tokens.swift */,
+				954903532BAC935A00A76F78 /* TokensViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		954903552BAC945100A76F78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9549034D2BAC927300A76F78 /* TokensView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		954903562BAC945A00A76F78 /* Old */ = {
+			isa = PBXGroup;
+			children = (
 				954903462BABB29B00A76F78 /* FirstCompoundView.swift */,
 				954903492BABB30E00A76F78 /* FirstCompoundViewModel.swift */,
 				9549034B2BABB40A00A76F78 /* CatFacts.swift */,
 			);
-			path = CompoundInterviewKit;
+			path = Old;
+			sourceTree = "<group>";
+		};
+		954903572BAC953000A76F78 /* CompoundComponentsKit */ = {
+			isa = PBXGroup;
+			children = (
+				954903582BAC953D00A76F78 /* Tokens */,
+			);
+			path = CompoundComponentsKit;
+			sourceTree = "<group>";
+		};
+		954903582BAC953D00A76F78 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				954903592BAC954C00A76F78 /* TokensCardView.swift */,
+				9549035B2BAC964A00A76F78 /* TokenView.swift */,
+			);
+			path = Tokens;
 			sourceTree = "<group>";
 		};
 		9553C8102BA0F1D300D4D10E = {
@@ -165,6 +229,7 @@
 		9553C82B2BA0F2DE00D4D10E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				954903572BAC953000A76F78 /* CompoundComponentsKit */,
 				954903482BABB2D900A76F78 /* CompoundInterviewKit */,
 				954903412BABB02D00A76F78 /* NetworkingKit */,
 				9553C82C2BA0F31400D4D10E /* CourseScreenKit */,
@@ -248,6 +313,7 @@
 			packageProductDependencies = (
 				95F339CB2BA2204A00A56E29 /* SDWebImage */,
 				95F339CD2BA2204A00A56E29 /* SDWebImageMapKit */,
+				9549035E2BAC9B4100A76F78 /* SDWebImageSwiftUI */,
 			);
 			productName = Speak;
 			productReference = 9553C8192BA0F1D300D4D10E /* Speak.app */;
@@ -279,6 +345,7 @@
 			mainGroup = 9553C8102BA0F1D300D4D10E;
 			packageReferences = (
 				95F339CA2BA2204A00A56E29 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				9549035D2BAC9B4100A76F78 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 9553C81A2BA0F1D300D4D10E /* Products */;
 			projectDirPath = "";
@@ -309,16 +376,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				95F339D92BA24F6B00A56E29 /* Course.swift in Sources */,
+				9549035A2BAC954C00A76F78 /* TokensCardView.swift in Sources */,
 				9553C82F2BA0F91900D4D10E /* CoursesVCRepresentable.swift in Sources */,
 				9549034C2BABB40A00A76F78 /* CatFacts.swift in Sources */,
 				95F339DE2BA258ED00A56E29 /* DayCell.swift in Sources */,
 				9541A84F2BA3871400C29F80 /* RecordView.swift in Sources */,
+				9549035C2BAC964A00A76F78 /* TokenView.swift in Sources */,
 				95F339D62BA24E2800A56E29 /* LocalJsonRetriever.swift in Sources */,
 				9553C81F2BA0F1D300D4D10E /* FirstSpeakView.swift in Sources */,
 				95F339DC2BA2553500A56E29 /* UnitCell.swift in Sources */,
 				9549034A2BABB30E00A76F78 /* FirstCompoundViewModel.swift in Sources */,
 				954903472BABB29B00A76F78 /* FirstCompoundView.swift in Sources */,
 				9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */,
+				954903542BAC935A00A76F78 /* TokensViewModel.swift in Sources */,
 				9541A85A2BA3BDE300C29F80 /* WebRequestBuilder.swift in Sources */,
 				9541A8562BA3B2AA00C29F80 /* RecordViewModel.swift in Sources */,
 				956C33112BA2137D00AFBC90 /* CoursesHeroHeaderView.swift in Sources */,
@@ -328,6 +398,8 @@
 				9541A8542BA3B04B00C29F80 /* WebSocketManager.swift in Sources */,
 				954903432BABB03D00A76F78 /* GenericNetworker.swift in Sources */,
 				954903452BABB1A800A76F78 /* Networking Error.swift in Sources */,
+				9549034E2BAC927300A76F78 /* TokensView.swift in Sources */,
+				954903522BAC92F600A76F78 /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +620,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9549035D2BAC9B4100A76F78 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
 		95F339CA2BA2204A00A56E29 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
@@ -559,6 +639,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9549035E2BAC9B4100A76F78 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9549035D2BAC9B4100A76F78 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		95F339CB2BA2204A00A56E29 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95F339CA2BA2204A00A56E29 /* XCRemoteSwiftPackageReference "SDWebImage" */;

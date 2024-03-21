@@ -42,7 +42,6 @@ public final class GenericNetworker: ObservableObject {
             .shared
             .dataTaskPublisher(for: request)
             .map(\.data).map({ data -> Data in
-                print(String(data: data, encoding: .utf8))
                 return data
             })
             .decode(type: V.self, decoder: JSONDecoder())
