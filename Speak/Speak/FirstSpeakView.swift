@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FirstSpeakView.swift
 //  Speak
 //
 //  Created by Richard Velasquez on 3/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FirstView: View {
+struct FirstSpeakView: View {
     @State private var navPath = NavigationPath()
     @State private var selectedDay: Day? = nil
     var body: some View {
@@ -24,5 +24,5 @@ struct FirstView: View {
 }
 
 #Preview {
-    FirstView()
+    FirstSpeakView()
 }
