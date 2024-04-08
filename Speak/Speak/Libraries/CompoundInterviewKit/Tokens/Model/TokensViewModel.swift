@@ -25,7 +25,6 @@ final class TokensViewModel: NSObject, ObservableObject {
         GenericNetworker.makeRequest(
             urlString: urlString,
             input: nil,
-            output: Tokens.self,
             method: "GET"
         ).receive(
             on: DispatchQueue.main

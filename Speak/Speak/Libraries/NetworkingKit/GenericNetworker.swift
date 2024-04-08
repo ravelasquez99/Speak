@@ -12,7 +12,6 @@ public final class GenericNetworker: ObservableObject {
     public static func makeRequest<V: Codable>(
         urlString: String,
         input: Codable?,
-        output: V.Type,
         method: String
     ) -> AnyPublisher<V, NewtworkingError> {
         guard let url = URL(

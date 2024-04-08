@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953F38352BC46ADF0085C980 /* Heaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F38342BC46ADF0085C980 /* Heaping.swift */; };
+		953F38382BC46B320085C980 /* HeapHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F38372BC46B320085C980 /* HeapHelpers.swift */; };
+		953F383A2BC46B460085C980 /* BaseHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F38392BC46B460085C980 /* BaseHeap.swift */; };
 		9541A85C2BA3C4B400C29F80 /* asr-stream-audio-chunks.json in Resources */ = {isa = PBXBuildFile; fileRef = 9541A85B2BA3C4B400C29F80 /* asr-stream-audio-chunks.json */; };
+		95481E852BBF15F900AA09EC /* SpeakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95481E842BBF15F900AA09EC /* SpeakTests.swift */; };
+		95481E8C2BBF160800AA09EC /* HeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95481E8B2BBF160800AA09EC /* HeapTests.swift */; };
 		954903432BABB03D00A76F78 /* GenericNetworker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903422BABB03D00A76F78 /* GenericNetworker.swift */; };
 		954903452BABB1A800A76F78 /* Networking Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903442BABB1A800A76F78 /* Networking Error.swift */; };
 		954903472BABB29B00A76F78 /* FirstCompoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954903462BABB29B00A76F78 /* FirstCompoundView.swift */; };
@@ -22,14 +27,35 @@
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
 		9553C8252BA0F1D400D4D10E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */; };
+		95E037362BBDE2F2005F4BE9 /* DogsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E037352BBDE2F2005F4BE9 /* DogsGridView.swift */; };
+		95E0373A2BBDE313005F4BE9 /* Dogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E037392BBDE313005F4BE9 /* Dogs.swift */; };
+		95E0373D2BBDE360005F4BE9 /* DogsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0373C2BBDE360005F4BE9 /* DogsGridViewModel.swift */; };
+		95E5D7B22BBE083800B374F0 /* ChatGPTHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E5D7B12BBE083800B374F0 /* ChatGPTHeap.swift */; };
+		95E5D7B42BBE179900B374F0 /* Heaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E5D7B32BBE179900B374F0 /* Heaps.swift */; };
 		95F339CC2BA2204A00A56E29 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 95F339CB2BA2204A00A56E29 /* SDWebImage */; };
 		95F339CE2BA2204A00A56E29 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95F339CD2BA2204A00A56E29 /* SDWebImageMapKit */; };
 		95F339D32BA24D5D00A56E29 /* course.json in Resources */ = {isa = PBXBuildFile; fileRef = 95F339D22BA24D5D00A56E29 /* course.json */; };
 		95F339D62BA24E2800A56E29 /* LocalJsonRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F339D52BA24E2800A56E29 /* LocalJsonRetriever.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		95481E862BBF15F900AA09EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9553C8112BA0F1D300D4D10E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9553C8182BA0F1D300D4D10E;
+			remoteInfo = Speak;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		953F38342BC46ADF0085C980 /* Heaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heaping.swift; sourceTree = "<group>"; };
+		953F38372BC46B320085C980 /* HeapHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapHelpers.swift; sourceTree = "<group>"; };
+		953F38392BC46B460085C980 /* BaseHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeap.swift; sourceTree = "<group>"; };
 		9541A85B2BA3C4B400C29F80 /* asr-stream-audio-chunks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "asr-stream-audio-chunks.json"; sourceTree = "<group>"; };
+		95481E822BBF15F900AA09EC /* SpeakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95481E842BBF15F900AA09EC /* SpeakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakTests.swift; sourceTree = "<group>"; };
+		95481E8B2BBF160800AA09EC /* HeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapTests.swift; sourceTree = "<group>"; };
 		954903422BABB03D00A76F78 /* GenericNetworker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworker.swift; sourceTree = "<group>"; };
 		954903442BABB1A800A76F78 /* Networking Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking Error.swift"; sourceTree = "<group>"; };
 		954903462BABB29B00A76F78 /* FirstCompoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCompoundView.swift; sourceTree = "<group>"; };
@@ -45,11 +71,23 @@
 		9553C8202BA0F1D400D4D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9553C8222BA0F1D400D4D10E /* Speak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speak.entitlements; sourceTree = "<group>"; };
 		9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95E037352BBDE2F2005F4BE9 /* DogsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsGridView.swift; sourceTree = "<group>"; };
+		95E037392BBDE313005F4BE9 /* Dogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dogs.swift; sourceTree = "<group>"; };
+		95E0373C2BBDE360005F4BE9 /* DogsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsGridViewModel.swift; sourceTree = "<group>"; };
+		95E5D7B12BBE083800B374F0 /* ChatGPTHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTHeap.swift; sourceTree = "<group>"; };
+		95E5D7B32BBE179900B374F0 /* Heaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heaps.swift; sourceTree = "<group>"; };
 		95F339D22BA24D5D00A56E29 /* course.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = course.json; sourceTree = "<group>"; };
 		95F339D52BA24E2800A56E29 /* LocalJsonRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonRetriever.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		95481E7F2BBF15F900AA09EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9553C8162BA0F1D300D4D10E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +101,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953F38332BC46AD20085C980 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				953F38342BC46ADF0085C980 /* Heaping.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		953F38362BC46B290085C980 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				953F38372BC46B320085C980 /* HeapHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		95481E832BBF15F900AA09EC /* SpeakTests */ = {
+			isa = PBXGroup;
+			children = (
+				95481E842BBF15F900AA09EC /* SpeakTests.swift */,
+				95481E8B2BBF160800AA09EC /* HeapTests.swift */,
+			);
+			path = SpeakTests;
+			sourceTree = "<group>";
+		};
 		954903412BABB02D00A76F78 /* NetworkingKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				9553C81B2BA0F1D300D4D10E /* Speak */,
+				95481E832BBF15F900AA09EC /* SpeakTests */,
 				9553C81A2BA0F1D300D4D10E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				9553C8192BA0F1D300D4D10E /* Speak.app */,
+				95481E822BBF15F900AA09EC /* SpeakTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,12 +240,76 @@
 		9553C82B2BA0F2DE00D4D10E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				95E5D7AE2BBE081700B374F0 /* DataStructures */,
+				95E037342BBDE2E4005F4BE9 /* DogsGrid */,
 				954903572BAC953000A76F78 /* CompoundComponentsKit */,
 				954903482BABB2D900A76F78 /* CompoundInterviewKit */,
 				954903412BABB02D00A76F78 /* NetworkingKit */,
 				95F339D42BA24D7200A56E29 /* DataRetrievalKit */,
 			);
 			path = Libraries;
+			sourceTree = "<group>";
+		};
+		95E037342BBDE2E4005F4BE9 /* DogsGrid */ = {
+			isa = PBXGroup;
+			children = (
+				95E037372BBDE2F4005F4BE9 /* Model */,
+				95E037352BBDE2F2005F4BE9 /* DogsGridView.swift */,
+			);
+			path = DogsGrid;
+			sourceTree = "<group>";
+		};
+		95E037372BBDE2F4005F4BE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95E0373B2BBDE354005F4BE9 /* ViewModel */,
+				95E037382BBDE307005F4BE9 /* WebModels */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95E037382BBDE307005F4BE9 /* WebModels */ = {
+			isa = PBXGroup;
+			children = (
+				95E037392BBDE313005F4BE9 /* Dogs.swift */,
+			);
+			path = WebModels;
+			sourceTree = "<group>";
+		};
+		95E0373B2BBDE354005F4BE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95E0373C2BBDE360005F4BE9 /* DogsGridViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		95E5D7AE2BBE081700B374F0 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				95E5D7AF2BBE082200B374F0 /* Heap */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		95E5D7AF2BBE082200B374F0 /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				953F38392BC46B460085C980 /* BaseHeap.swift */,
+				95E5D7B32BBE179900B374F0 /* Heaps.swift */,
+				953F38362BC46B290085C980 /* Helpers */,
+				953F38332BC46AD20085C980 /* Protocols */,
+				95E5D7B02BBE082800B374F0 /* ChatGPTHeap */,
+			);
+			path = Heap;
+			sourceTree = "<group>";
+		};
+		95E5D7B02BBE082800B374F0 /* ChatGPTHeap */ = {
+			isa = PBXGroup;
+			children = (
+				95E5D7B12BBE083800B374F0 /* ChatGPTHeap.swift */,
+			);
+			path = ChatGPTHeap;
 			sourceTree = "<group>";
 		};
 		95F339D42BA24D7200A56E29 /* DataRetrievalKit */ = {
@@ -194,6 +323,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		95481E812BBF15F900AA09EC /* SpeakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95481E8A2BBF15F900AA09EC /* Build configuration list for PBXNativeTarget "SpeakTests" */;
+			buildPhases = (
+				95481E7E2BBF15F900AA09EC /* Sources */,
+				95481E7F2BBF15F900AA09EC /* Frameworks */,
+				95481E802BBF15F900AA09EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95481E872BBF15F900AA09EC /* PBXTargetDependency */,
+			);
+			name = SpeakTests;
+			productName = SpeakTests;
+			productReference = 95481E822BBF15F900AA09EC /* SpeakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9553C8182BA0F1D300D4D10E /* Speak */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9553C8282BA0F1D400D4D10E /* Build configuration list for PBXNativeTarget "Speak" */;
@@ -226,6 +373,10 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					95481E812BBF15F900AA09EC = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 9553C8182BA0F1D300D4D10E;
+					};
 					9553C8182BA0F1D300D4D10E = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -249,11 +400,19 @@
 			projectRoot = "";
 			targets = (
 				9553C8182BA0F1D300D4D10E /* Speak */,
+				95481E812BBF15F900AA09EC /* SpeakTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		95481E802BBF15F900AA09EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9553C8172BA0F1D300D4D10E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,20 +427,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		95481E7E2BBF15F900AA09EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95481E852BBF15F900AA09EC /* SpeakTests.swift in Sources */,
+				95481E8C2BBF160800AA09EC /* HeapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9553C8152BA0F1D300D4D10E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E0373A2BBDE313005F4BE9 /* Dogs.swift in Sources */,
 				9549035A2BAC954C00A76F78 /* TokensCardView.swift in Sources */,
 				9549034C2BABB40A00A76F78 /* CatFacts.swift in Sources */,
 				9549035C2BAC964A00A76F78 /* TokenView.swift in Sources */,
 				95F339D62BA24E2800A56E29 /* LocalJsonRetriever.swift in Sources */,
+				95E5D7B22BBE083800B374F0 /* ChatGPTHeap.swift in Sources */,
+				953F383A2BC46B460085C980 /* BaseHeap.swift in Sources */,
+				95E0373D2BBDE360005F4BE9 /* DogsGridViewModel.swift in Sources */,
 				9549034A2BABB30E00A76F78 /* FirstCompoundViewModel.swift in Sources */,
 				954903472BABB29B00A76F78 /* FirstCompoundView.swift in Sources */,
+				953F38382BC46B320085C980 /* HeapHelpers.swift in Sources */,
 				9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */,
+				953F38352BC46ADF0085C980 /* Heaping.swift in Sources */,
 				954903542BAC935A00A76F78 /* TokensViewModel.swift in Sources */,
 				954903432BABB03D00A76F78 /* GenericNetworker.swift in Sources */,
+				95E5D7B42BBE179900B374F0 /* Heaps.swift in Sources */,
 				954903452BABB1A800A76F78 /* Networking Error.swift in Sources */,
+				95E037362BBDE2F2005F4BE9 /* DogsGridView.swift in Sources */,
 				9549034E2BAC927300A76F78 /* TokensView.swift in Sources */,
 				954903522BAC92F600A76F78 /* Tokens.swift in Sources */,
 			);
@@ -289,7 +465,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		95481E872BBF15F900AA09EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9553C8182BA0F1D300D4D10E /* Speak */;
+			targetProxy = 95481E862BBF15F900AA09EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		95481E882BBF15F900AA09EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JP5XH4BVVG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = speakrickyv.SpeakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Speak";
+			};
+			name = Debug;
+		};
+		95481E892BBF15F900AA09EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JP5XH4BVVG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = speakrickyv.SpeakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Speak";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		9553C8262BA0F1D400D4D10E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -483,6 +708,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		95481E8A2BBF15F900AA09EC /* Build configuration list for PBXNativeTarget "SpeakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95481E882BBF15F900AA09EC /* Debug */,
+				95481E892BBF15F900AA09EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9553C8142BA0F1D300D4D10E /* Build configuration list for PBXProject "Speak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

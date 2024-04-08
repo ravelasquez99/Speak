@@ -25,13 +25,12 @@ public final class FirstCompoundViewModel: NSObject, ObservableObject {
         GenericNetworker.makeRequest(
             urlString: urlString,
             input: nil,
-            output: CatFacts.self,
             method: "GET"
         ).receive(
             on: DispatchQueue.main
         ).sink { completion in
             return
-        } receiveValue: { facts in
+        } receiveValue: { (facts: CatFacts) in
             self.fact = facts.data.first
         }.store(in: &cancellables)
     }
