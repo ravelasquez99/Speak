@@ -28,6 +28,9 @@
 		9553C8252BA0F1D400D4D10E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */; };
 		95C21C772BC5D37A00E17130 /* RadixSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C762BC5D37A00E17130 /* RadixSorter.swift */; };
 		95C21C7A2BC5D9CF00E17130 /* RadixSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C792BC5D9CF00E17130 /* RadixSortTests.swift */; };
+		95C21C7E2BC5DE8000E17130 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C7D2BC5DE8000E17130 /* QuickSort.swift */; };
+		95C21C802BC5E63C00E17130 /* QuickSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C7F2BC5E63C00E17130 /* QuickSortTests.swift */; };
+		95C21C822BC5E6B100E17130 /* SortTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C812BC5E6B100E17130 /* SortTestHelpers.swift */; };
 		95E037362BBDE2F2005F4BE9 /* DogsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E037352BBDE2F2005F4BE9 /* DogsGridView.swift */; };
 		95E0373A2BBDE313005F4BE9 /* Dogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E037392BBDE313005F4BE9 /* Dogs.swift */; };
 		95E0373D2BBDE360005F4BE9 /* DogsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0373C2BBDE360005F4BE9 /* DogsGridViewModel.swift */; };
@@ -73,6 +76,9 @@
 		9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95C21C762BC5D37A00E17130 /* RadixSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadixSorter.swift; sourceTree = "<group>"; };
 		95C21C792BC5D9CF00E17130 /* RadixSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadixSortTests.swift; sourceTree = "<group>"; };
+		95C21C7D2BC5DE8000E17130 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
+		95C21C7F2BC5E63C00E17130 /* QuickSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSortTests.swift; sourceTree = "<group>"; };
+		95C21C812BC5E6B100E17130 /* SortTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTestHelpers.swift; sourceTree = "<group>"; };
 		95E037352BBDE2F2005F4BE9 /* DogsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsGridView.swift; sourceTree = "<group>"; };
 		95E037392BBDE313005F4BE9 /* Dogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dogs.swift; sourceTree = "<group>"; };
 		95E0373C2BBDE360005F4BE9 /* DogsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsGridViewModel.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 		95C21C742BC5D36400E17130 /* Sorts */ = {
 			isa = PBXGroup;
 			children = (
+				95C21C7C2BC5DD7200E17130 /* QuickSort */,
 				95C21C752BC5D36D00E17130 /* Radix */,
 			);
 			path = Sorts;
@@ -272,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				95C21C792BC5D9CF00E17130 /* RadixSortTests.swift */,
+				95C21C7F2BC5E63C00E17130 /* QuickSortTests.swift */,
+				95C21C812BC5E6B100E17130 /* SortTestHelpers.swift */,
 			);
 			path = Sorts;
 			sourceTree = "<group>";
@@ -282,6 +291,14 @@
 				95481E8B2BBF160800AA09EC /* HeapTests.swift */,
 			);
 			path = Heaps;
+			sourceTree = "<group>";
+		};
+		95C21C7C2BC5DD7200E17130 /* QuickSort */ = {
+			isa = PBXGroup;
+			children = (
+				95C21C7D2BC5DE8000E17130 /* QuickSort.swift */,
+			);
+			path = QuickSort;
 			sourceTree = "<group>";
 		};
 		95E037342BBDE2E4005F4BE9 /* DogsGrid */ = {
@@ -468,6 +485,8 @@
 			files = (
 				95C21C7A2BC5D9CF00E17130 /* RadixSortTests.swift in Sources */,
 				95481E8C2BBF160800AA09EC /* HeapTests.swift in Sources */,
+				95C21C802BC5E63C00E17130 /* QuickSortTests.swift in Sources */,
+				95C21C822BC5E6B100E17130 /* SortTestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +509,7 @@
 				953F38352BC46ADF0085C980 /* Heaping.swift in Sources */,
 				95C21C772BC5D37A00E17130 /* RadixSorter.swift in Sources */,
 				954903542BAC935A00A76F78 /* TokensViewModel.swift in Sources */,
+				95C21C7E2BC5DE8000E17130 /* QuickSort.swift in Sources */,
 				954903432BABB03D00A76F78 /* GenericNetworker.swift in Sources */,
 				95E5D7B42BBE179900B374F0 /* Heaps.swift in Sources */,
 				954903452BABB1A800A76F78 /* Networking Error.swift in Sources */,

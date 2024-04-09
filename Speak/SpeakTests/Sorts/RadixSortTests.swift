@@ -51,22 +51,4 @@ final class RadixSortTests: XCTestCase {
         RadixSorter.sort(&array)
         XCTAssertTrue(isSortedAscending(array: array), "Array should be sorted in ascending order, even with large numbers")
     }
-
-    private func isSortedAscending<T: Intable>(array: [T]) -> Bool {
-        guard array.count > 0 else {
-            return true
-        }
-
-        var index = 1
-        var current = array[0]
-        while index < array.count {
-            if array[index] < current {
-                return false
-            }
-            
-            index += 1
-        }
-
-        return true
-    }
 }
