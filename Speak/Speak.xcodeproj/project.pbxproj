@@ -26,6 +26,8 @@
 		9553C81D2BA0F1D300D4D10E /* SpeakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553C81C2BA0F1D300D4D10E /* SpeakApp.swift */; };
 		9553C8212BA0F1D400D4D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8202BA0F1D400D4D10E /* Assets.xcassets */; };
 		9553C8252BA0F1D400D4D10E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */; };
+		9554F8622BC70F1800EB75D2 /* MergeSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554F8612BC70F1800EB75D2 /* MergeSorter.swift */; };
+		9554F8642BC717E100EB75D2 /* MergeSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554F8632BC717E100EB75D2 /* MergeSortTests.swift */; };
 		95C21C772BC5D37A00E17130 /* RadixSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C762BC5D37A00E17130 /* RadixSorter.swift */; };
 		95C21C7A2BC5D9CF00E17130 /* RadixSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C792BC5D9CF00E17130 /* RadixSortTests.swift */; };
 		95C21C7E2BC5DE8000E17130 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C21C7D2BC5DE8000E17130 /* QuickSort.swift */; };
@@ -74,6 +76,8 @@
 		9553C8202BA0F1D400D4D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9553C8222BA0F1D400D4D10E /* Speak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speak.entitlements; sourceTree = "<group>"; };
 		9553C8242BA0F1D400D4D10E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9554F8612BC70F1800EB75D2 /* MergeSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSorter.swift; sourceTree = "<group>"; };
+		9554F8632BC717E100EB75D2 /* MergeSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortTests.swift; sourceTree = "<group>"; };
 		95C21C762BC5D37A00E17130 /* RadixSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadixSorter.swift; sourceTree = "<group>"; };
 		95C21C792BC5D9CF00E17130 /* RadixSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadixSortTests.swift; sourceTree = "<group>"; };
 		95C21C7D2BC5DE8000E17130 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
@@ -258,9 +262,18 @@
 			path = Libraries;
 			sourceTree = "<group>";
 		};
+		9554F8602BC70F0300EB75D2 /* MergeSort */ = {
+			isa = PBXGroup;
+			children = (
+				9554F8612BC70F1800EB75D2 /* MergeSorter.swift */,
+			);
+			path = MergeSort;
+			sourceTree = "<group>";
+		};
 		95C21C742BC5D36400E17130 /* Sorts */ = {
 			isa = PBXGroup;
 			children = (
+				9554F8602BC70F0300EB75D2 /* MergeSort */,
 				95C21C7C2BC5DD7200E17130 /* QuickSort */,
 				95C21C752BC5D36D00E17130 /* Radix */,
 			);
@@ -281,6 +294,7 @@
 				95C21C792BC5D9CF00E17130 /* RadixSortTests.swift */,
 				95C21C7F2BC5E63C00E17130 /* QuickSortTests.swift */,
 				95C21C812BC5E6B100E17130 /* SortTestHelpers.swift */,
+				9554F8632BC717E100EB75D2 /* MergeSortTests.swift */,
 			);
 			path = Sorts;
 			sourceTree = "<group>";
@@ -484,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C21C7A2BC5D9CF00E17130 /* RadixSortTests.swift in Sources */,
+				9554F8642BC717E100EB75D2 /* MergeSortTests.swift in Sources */,
 				95481E8C2BBF160800AA09EC /* HeapTests.swift in Sources */,
 				95C21C802BC5E63C00E17130 /* QuickSortTests.swift in Sources */,
 				95C21C822BC5E6B100E17130 /* SortTestHelpers.swift in Sources */,
@@ -502,6 +517,7 @@
 				95E5D7B22BBE083800B374F0 /* ChatGPTHeap.swift in Sources */,
 				953F383A2BC46B460085C980 /* BaseHeap.swift in Sources */,
 				95E0373D2BBDE360005F4BE9 /* DogsGridViewModel.swift in Sources */,
+				9554F8622BC70F1800EB75D2 /* MergeSorter.swift in Sources */,
 				9549034A2BABB30E00A76F78 /* FirstCompoundViewModel.swift in Sources */,
 				954903472BABB29B00A76F78 /* FirstCompoundView.swift in Sources */,
 				953F38382BC46B320085C980 /* HeapHelpers.swift in Sources */,
