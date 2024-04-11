@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9509E0A72BC8510B00B5BD4E /* EmojiBlastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509E0A62BC8510B00B5BD4E /* EmojiBlastView.swift */; };
 		953F38352BC46ADF0085C980 /* Heaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F38342BC46ADF0085C980 /* Heaping.swift */; };
 		953F38382BC46B320085C980 /* HeapHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F38372BC46B320085C980 /* HeapHelpers.swift */; };
 		953F383A2BC46B460085C980 /* BaseHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F38392BC46B460085C980 /* BaseHeap.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9509E0A62BC8510B00B5BD4E /* EmojiBlastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBlastView.swift; sourceTree = "<group>"; };
 		953F38342BC46ADF0085C980 /* Heaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heaping.swift; sourceTree = "<group>"; };
 		953F38372BC46B320085C980 /* HeapHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapHelpers.swift; sourceTree = "<group>"; };
 		953F38392BC46B460085C980 /* BaseHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeap.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9509E0A52BC850FA00B5BD4E /* EmojiBlast */ = {
+			isa = PBXGroup;
+			children = (
+				9509E0A62BC8510B00B5BD4E /* EmojiBlastView.swift */,
+			);
+			path = EmojiBlast;
+			sourceTree = "<group>";
+		};
 		953F38332BC46AD20085C980 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +267,7 @@
 		9553C82B2BA0F2DE00D4D10E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9509E0A52BC850FA00B5BD4E /* EmojiBlast */,
 				95E5D7AE2BBE081700B374F0 /* DataStructures */,
 				95E037342BBDE2E4005F4BE9 /* DogsGrid */,
 				954903572BAC953000A76F78 /* CompoundComponentsKit */,
@@ -553,6 +564,7 @@
 				954903432BABB03D00A76F78 /* GenericNetworker.swift in Sources */,
 				95E5D7B42BBE179900B374F0 /* Heaps.swift in Sources */,
 				954903452BABB1A800A76F78 /* Networking Error.swift in Sources */,
+				9509E0A72BC8510B00B5BD4E /* EmojiBlastView.swift in Sources */,
 				95E037362BBDE2F2005F4BE9 /* DogsGridView.swift in Sources */,
 				9549034E2BAC927300A76F78 /* TokensView.swift in Sources */,
 				954903522BAC92F600A76F78 /* Tokens.swift in Sources */,
